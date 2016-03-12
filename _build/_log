@@ -1,0 +1,12 @@
+### Starting build.
+Backtrace:
+                      - Failed to build the target sample.native
+                          - Building sample.native:
+                              - Building sample.cmx:
+                                  - Failed to build all of these:
+                                      - Building sample.ml:
+                                          - Failed to build all of these:
+                                              - Building sample.mly
+                                              - Building sample.mll
+                                      - Building sample.mlpack
+# Compilation unsuccessful.
