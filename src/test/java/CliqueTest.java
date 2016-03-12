@@ -1,19 +1,11 @@
 import jgh.javagraph.Edge;
 import jgh.javagraph.Graph;
-import jgh.javagraph.INode;
-import jgh.javagraph.algorithms.FordFulkerson;
 import jgh.javagraph.cliques.Cliques;
-import jgh.javagraph.colorings.Chromatic;
-import jgh.javagraph.flownetwork.CapacityEdge;
-import jgh.javagraph.generation.CompleteGeneration;
 import jgh.javagraph.generation.NodeGeneration;
 import jgh.javagraph.generation.SpecialGeneration;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 
 /**
