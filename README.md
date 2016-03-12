@@ -18,10 +18,10 @@
 The library contains classes to construct Voronoi Diagrams from arbitray collections of 2D points. To create Voronoi diagrams
 an implementation of *Fortune's algorithm* is used, with time complexity *~O(n log n)*.
 
-* ![Pretty Voronoi](https://bitbucket.org/jghough/javagraph2/raw/master/images/prettypattern1.png)
-* ![Pretty Voronoi](https://bitbucket.org/jghough/javagraph2/raw/master/images/prettypattern2.png)
-* ![Pretty Voronoi](https://bitbucket.org/jghough/javagraph2/raw/master/images/random_with_triangulation.png)
-* ![Pretty Voronoi](https://bitbucket.org/jghough/javagraph2/raw/master/images/random1.png)
+ ![Pretty Voronoi](/images/prettypattern1.png)
+ ![Pretty Voronoi](/images/prettypattern2.png)
+ ![Pretty Voronoi](/images/random_with_triangulation.png)
+ ![Pretty Voronoi](/images/random1.png)
 
 ### Graph structure
 
