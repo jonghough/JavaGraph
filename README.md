@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jonghough/JavaGraph.svg?branch=master)](https://travis-ci.org/jonghough/JavaGraph)
 # Java Graph Library
 
 ## A collection of algorithms and datatypes for working with Graphs
