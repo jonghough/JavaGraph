@@ -12,6 +12,8 @@ import java.util.*;
  * A <i>Travelling Salesman Problem</i> solver. Uses  a genetic algorithm to
  * find the probable best solution, i.e. the minimum weight Hamiltonian Path
  * on a <b>complete graph</b>.
+ * <br>
+ * This is based on the Genetic Algorithm example in <i>Introduction to Neural Networks with Java</i>.
  */
 public class TspSolver<N extends INode, E extends WeightedEdge<N>> {
 
@@ -21,18 +23,12 @@ public class TspSolver<N extends INode, E extends WeightedEdge<N>> {
     private int mPopulation;
     private int mMatingPopulation;
     private int mSelectedPopulation;
-    private int mCutLength;
 
     private ArrayList<Chromosome<N,E>> mChromosomes;
     private int mGeneration = 0;
     private float mCost = Float.MAX_VALUE;
 
     private ArrayList<N> mNodeList;
-
-    /**
-     * Instantiates an instance of a TspSolver.
-     * @param graph complete graph.
-     */
 
     /**
      * Instantiates an instance of a TspSolver.
@@ -51,11 +47,10 @@ public class TspSolver<N extends INode, E extends WeightedEdge<N>> {
         mMatingPopulation = (int) (mPopulation * 0.5f);
 
         mSelectedPopulation = (int) (mMatingPopulation * 0.5f);
-        mCutLength = (int) (mNodeCount / 5);
 
         mChromosomes = new ArrayList<Chromosome<N,E>>(mPopulation);
         for (int i = 0; i < mPopulation; i++) {
-            mChromosomes.add(new Chromosome(graph));
+            mChromosomes.add(new Chromosome(graph, mNodeList));
         }
 
         Collections.sort(mChromosomes, new ChromosomeComparator());
@@ -66,31 +61,24 @@ public class TspSolver<N extends INode, E extends WeightedEdge<N>> {
      */
     public void solve() {
         float cachedCost = 0f;
-        while (mGeneration < 100) {
+        while (mGeneration < 50) {
             int iOffset = mMatingPopulation;
             int mutated = 0;
-
             for (int i = 0; i < mSelectedPopulation; i++) {
                 Chromosome mother = mChromosomes.get(i);
                 int f = (int) (0.999f * Math.random() * mMatingPopulation);
+
                 Chromosome father = mChromosomes.get(f);
-
                 mutated += mother.mate(father, mChromosomes.get(iOffset), mChromosomes.get(iOffset + 1));
-
                 iOffset += 2;
             }
 
-
-            for (int i = 0; i < mMatingPopulation; i++) {
-                mChromosomes.set(i, mChromosomes.get(i + mMatingPopulation));
-                mChromosomes.get(i).calculateCost(mGraph, mNodeList);
-            }
             Collections.sort(mChromosomes, new ChromosomeComparator());
-            mChromosomes.get(0).calculateCost(mGraph, mNodeList);
+            mChromosomes.get(0).calculateCost(mGraph);
             float cost = mChromosomes.get(0).getCost();
+            float costmax = mChromosomes.get(mChromosomes.size() - 1).getCost();
             float diff = Math.abs(cost - mCost);
             mCost = cost;
-            System.out.println("not final cost is " + mCost);
             float mRate = 100 * mutated * 1f / mMatingPopulation;
 
             if ((int) mCost == (int) cachedCost) {
@@ -105,6 +93,7 @@ public class TspSolver<N extends INode, E extends WeightedEdge<N>> {
         for (int nodeIndex : bestPath) {
             System.out.println("node " + mNodeList.get(nodeIndex).getLabel());
         }
+        System.out.println("Cost is "+mChromosomes.get(0).getCost());
     }
 
 

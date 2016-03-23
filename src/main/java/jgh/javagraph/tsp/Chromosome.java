@@ -28,22 +28,27 @@ public class Chromosome<N extends INode, W extends WeightedEdge<N>> implements C
 
     private int mCut;
 
+    private Graph<N,W> mGraph;
+    private ArrayList<N> mOrderedNodeList;
+
     /**
      * Instantiate a single chromosome.
      *
      * @param graph
      */
-    public Chromosome(Graph<N,W> graph) {
-        ArrayList<N> nodes = new ArrayList<>(graph.getNodes());
-        mNodes = new int[nodes.size()];
+    public Chromosome(Graph<N,W> graph, ArrayList<N> orderedNodeList) {
+        //ArrayList<N> nodes = new ArrayList<>(graph.getNodes());
+        mOrderedNodeList = orderedNodeList;
+        mGraph = graph;
+        mNodes = new int[mOrderedNodeList.size()];
 
         boolean taken[] = new boolean[mNodes.length];
         mCost = 0;
 
-        for (int i = 0; i < nodes.size(); i++) {
+        for (int i = 0; i < mOrderedNodeList.size(); i++) {
             int candidate;
             do {
-                candidate = (int) (0.99999f * Math.random() * nodes.size());
+                candidate = (int) (0.99999f * Math.random() * mOrderedNodeList.size());
             } while (taken[candidate]);
             mNodes[i] = candidate;
             taken[candidate] = true;
@@ -61,13 +66,12 @@ public class Chromosome<N extends INode, W extends WeightedEdge<N>> implements C
      * to travel in a hamiltonian cycle around the graph.
      *
      * @param graph    Complete Graph
-     * @param nodeList the list of nodes of the graph.
      */
-    public void calculateCost(Graph<N,W> graph, ArrayList<N> nodeList) {
+    public void calculateCost(Graph<N,W> graph) {
         mCost = 0;
-        for (int i = 0; i < nodeList.size() - 1; i++) {
-            N n = nodeList.get(mNodes[i]);
-            N m = nodeList.get(mNodes[i + 1]);
+        for (int i = 0; i < mOrderedNodeList.size() - 1; i++) {
+            N n = mOrderedNodeList.get(mNodes[i]);
+            N m = mOrderedNodeList.get(mNodes[i + 1]);
 
             for (W edge : graph.getEdges()) {
                 if (edge.from() == n && edge.to() == m) {
@@ -82,8 +86,8 @@ public class Chromosome<N extends INode, W extends WeightedEdge<N>> implements C
         }
 
         //cycle finding so need to add the distance from last node to first node.
-        N n = nodeList.get(mNodes[nodeList.size() - 1]);
-        N m = nodeList.get(mNodes[0]);
+        N n = mOrderedNodeList.get(mNodes[mOrderedNodeList.size() - 1]);
+        N m = mOrderedNodeList.get(mNodes[0]);
 
         for (W edge : graph.getEdges()) {
             if (edge.from() == n && edge.to() == m) {
@@ -128,6 +132,9 @@ public class Chromosome<N extends INode, W extends WeightedEdge<N>> implements C
      * @return
      */
     public float getCost() {
+
+
+        calculateCost(mGraph);
         return mCost;
     }
 
