@@ -21,12 +21,16 @@ public class SpanningTree {
      */
     public static <N extends INode> ArrayList<WeightedEdge<N>> generateMinimumSpanningTree(Graph<N,WeightedEdge<N>> weightedGraph) {
 
-        Collections.sort(new ArrayList<WeightedEdge<N>>(weightedGraph.getEdges()));
         ArrayList<WeightedEdge<N>> gcopy = new ArrayList<WeightedEdge<N>>(weightedGraph.getEdges());
+        Collections.sort(gcopy);
         ArrayList<WeightedEdge<N>> stEdges = new ArrayList<WeightedEdge<N>>();
+
+        DisjointSet<N,WeightedEdge<N>> disjointSet = new DisjointSet<N,WeightedEdge<N>>(stEdges);
         while (gcopy.isEmpty() == false) {
             WeightedEdge<N> first = gcopy.get(0);
-            if (Utilities.isDisjoint(stEdges, first)) {
+
+            if(disjointSet.canAddEdge(first)){
+
                 stEdges.add(first);
             }
             gcopy.remove(0);
@@ -46,10 +50,12 @@ public class SpanningTree {
     public static <N extends INode, E extends IEdge<N>> ArrayList<E> generateSpanningTree(Graph<N,E> graph) {
 
         final ArrayList<E> stEdges = new ArrayList<E>();
+        final DisjointSet<N,E> disjointSet = new DisjointSet<N,E>(stEdges);
         GraphSearch.searchEdgesDepthFirst(graph, new GraphSearch.INextEdge<N,E>() {
             @Override
             public void onNextEdge(IGraph<N,E> graph, E previous, E current) {
-                if (Utilities.isDisjoint(stEdges, current)) {
+                if(disjointSet.canAddEdge(current)) {
+
                     stEdges.add(current);
                 }
             }
@@ -75,8 +81,10 @@ public class SpanningTree {
     public static <N extends INode, E extends IEdge<N>> ArrayList<E> generateSpanningTree(List<E> edgeList) {
         ArrayList<E> gcopy = new ArrayList<E>(edgeList);
         ArrayList<E> stEdges = new ArrayList<E>();
+        DisjointSet<N,E> disjointSet = new DisjointSet<N,E>(stEdges);
         for (E e : gcopy) {
-            if (Utilities.isDisjoint(stEdges, e)) {
+            if(disjointSet.canAddEdge(e)) {
+
                 stEdges.add(e);
             }
         }
