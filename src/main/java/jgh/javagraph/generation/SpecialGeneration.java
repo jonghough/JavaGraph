@@ -92,9 +92,9 @@ public class SpecialGeneration {
 
 
     /**
-     *
+     * Generates a <i>gear graph</i> of the given order.
      * @param order
-     * @return
+     * @return Graph object, a gear graph of the given order
      */
     public static Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>> generateGearGraph(int order){
         int count = 2 * order;
