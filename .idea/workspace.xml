@@ -2,82 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecea9c52-38da-45ac-8c56-f1dc7d389f5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/EdgeData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/NodeData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/VertexCover.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/VertexCoverTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/INode.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/AStar.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/AStar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AStarTest.java" afterPath="$PROJECT_DIR$/src/test/java/AStarTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/AStarTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/AStarTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BellmanFord.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BellmanFord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BellmanFordTest.java" afterPath="$PROJECT_DIR$/src/test/java/BellmanFordTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/BellmanFordTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/BellmanFordTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BiconnectedComponentsTest.java" afterPath="$PROJECT_DIR$/src/test/java/BiconnectedComponentsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/BiconnectedComponentsTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/BiconnectedComponentsTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/flownetwork/CapacityEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/flownetwork/CapacityEdge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/Chromosome.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/Chromosome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CliqueTest.java" afterPath="$PROJECT_DIR$/src/test/java/CliqueTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/CliqueTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/CliqueTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/cliques/Cliques.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/cliques/Cliques.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CompleteGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CompleteGeneration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Connectivity.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Connectivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CycleGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CycleGeneration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Cycles.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Cycles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CyclesTest.java" afterPath="$PROJECT_DIR$/src/test/java/CyclesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/CyclesTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/CyclesTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/DelaunayEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/DelaunayEdge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Dijkstra.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Dijkstra.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DijkstraTest.java" afterPath="$PROJECT_DIR$/src/test/java/DijkstraTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/DijkstraTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/DijkstraTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedEdge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedWeightedEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedWeightedEdge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/DisjointSet.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/DisjointSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/Edge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/Edge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/Graph.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/GraphGenerationTest.java" afterPath="$PROJECT_DIR$/src/test/java/GraphGenerationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/GraphGenerationTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/GraphGenerationTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/IEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/IEdge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/IGraph.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/IGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/linegraph/LineGraph.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/linegraph/LineGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LineGraphTest.java" afterPath="$PROJECT_DIR$/src/test/java/LineGraphTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/LineGraphTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/LineGraphTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/MinCut.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/MinCut.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MinCutTest.java" afterPath="$PROJECT_DIR$/src/test/java/MinCutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/MinCutTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/MinCutTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/ModifiableEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/ModifiableEdge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Node2d.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Node2d.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/NodeGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/NodeGeneration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/RandomGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/RandomGeneration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/RandomWalk.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/RandomWalk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/SpanningTree.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/SpanningTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SpanningTreeTest.java" afterPath="$PROJECT_DIR$/src/test/java/SpanningTreeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/SpanningTreeTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/SpanningTreeTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SpeedTest.java" afterPath="$PROJECT_DIR$/src/test/java/SpeedTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/SpeedTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/SpeedTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-AStarTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-AStarTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BellmanFordTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BellmanFordTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BiconnectedComponentsTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BiconnectedComponentsTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-CliqueTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-CliqueTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-DijkstraTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-DijkstraTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphGenerationTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphGenerationTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-LineGraphTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-LineGraphTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-MinCutTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-MinCutTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SpanningTreeTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-SpanningTreeTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SpeedTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-SpeedTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-VoronoiTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-VoronoiTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TSP.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TSP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/Tree.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/Tree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Utilities.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Utilities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/VoronoiTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/VoronoiTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/WeightedEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/WeightedEdge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/VertexCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/VertexCoverTest.java" />
     </list>
     <ignored path="javagraph2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/VertexCover.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,8 +101,8 @@
       <file leaf-file-name="VertexCoverTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/VertexCoverTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60807604">
-              <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.6437055">
+              <caret line="19" column="57" selection-start-line="15" selection-start-column="10" selection-end-line="19" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1326,7 +1251,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/VertexCover.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1335,8 +1260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VertexCoverTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60807604">
-          <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.6437055">
+          <caret line="19" column="57" selection-start-line="15" selection-start-column="10" selection-end-line="19" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
