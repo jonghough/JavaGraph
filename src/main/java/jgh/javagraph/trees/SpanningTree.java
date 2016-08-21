@@ -19,7 +19,7 @@ public class SpanningTree {
      * @param weightedGraph connected, weighted graph
      * @return List of edges in minimum spanning tree.
      */
-    public static <N extends INode> ArrayList<WeightedEdge<N>> generateMinimumSpanningTree(Graph<N,WeightedEdge<N>> weightedGraph) {
+    public static <N> ArrayList<WeightedEdge<N>> generateMinimumSpanningTree(Graph<N,WeightedEdge<N>> weightedGraph) {
 
         ArrayList<WeightedEdge<N>> gcopy = new ArrayList<WeightedEdge<N>>(weightedGraph.getEdges());
         Collections.sort(gcopy);
@@ -47,7 +47,7 @@ public class SpanningTree {
      * @param <E> edge type
      * @return list of edges forming a spanning tree
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<E> generateSpanningTree(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> ArrayList<E> generateSpanningTree(Graph<N,E> graph) {
 
         final ArrayList<E> stEdges = new ArrayList<E>();
         final DisjointSet<N,E> disjointSet = new DisjointSet<N,E>(stEdges);
@@ -78,7 +78,7 @@ public class SpanningTree {
      * @param <E> edge type
      * @return list of edges forming a spanning tree
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<E> generateSpanningTree(List<E> edgeList) {
+    public static <N, E extends IEdge<N>> ArrayList<E> generateSpanningTree(List<E> edgeList) {
         ArrayList<E> gcopy = new ArrayList<E>(edgeList);
         ArrayList<E> stEdges = new ArrayList<E>();
         DisjointSet<N,E> disjointSet = new DisjointSet<N,E>(stEdges);

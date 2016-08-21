@@ -1,14 +1,12 @@
 package jgh.javagraph;
 
-import jgh.javagraph.INode;
-
 import java.util.Set;
 
 /**
  * Edge base class.
- * @param <N> THe node type, an implementation of <code>INode</code>
+ * @param <N> THe node type
  */
-public abstract class IEdge<N extends INode> {
+public abstract class IEdge<N> {
 
     /**
      * Constructs the instance of <code>IEdge</code>
@@ -50,19 +48,5 @@ public abstract class IEdge<N extends INode> {
      */
     public abstract void accept(IEdgeVisitor visitor);
 
-    /**
-     * Returns true if this node has been visited,
-     * false otherwise.
-     *
-     * @return visited flag
-     */
-    public abstract boolean isVisited();
-
-    /**
-     * Sets the visited flag.
-     *
-     * @param visited
-     */
-    public abstract void setVisited(boolean visited);
 }
 

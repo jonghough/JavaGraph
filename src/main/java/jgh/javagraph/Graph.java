@@ -7,10 +7,10 @@ import java.util.*;
 /**
  * Basic Graph class. This class implements <code>IGraph</code>, and guarantees only
  * single edges per node pair.
- *
- * @param <E> The edge type.
+ * @param <N>
+ * @param <E>
  */
-public class Graph<N extends INode, E extends IEdge<N>> implements IGraph<N,E> {
+public class Graph<N, E extends IEdge<N>> implements IGraph<N,E> {
 
     ArrayList<E> mEdges;
     Set<N> mNodes;
@@ -52,6 +52,7 @@ public class Graph<N extends INode, E extends IEdge<N>> implements IGraph<N,E> {
         mNodes.addAll(nodes);
     }
 
+
     @Override
     public ArrayList<E> getEdges() {
         return mEdges;
@@ -70,7 +71,7 @@ public class Graph<N extends INode, E extends IEdge<N>> implements IGraph<N,E> {
      * @param node
      * @return degree of the node, or -1, if the node is not in the graph's node set.
      */
-    public int degree(INode node) {
+    public int degree(N node) {
         if (mNodes.contains(node) == false) {
             return -1;
         } else {
@@ -98,7 +99,7 @@ public class Graph<N extends INode, E extends IEdge<N>> implements IGraph<N,E> {
     public ArrayList<N> getMaxDegreeNode() {
         ArrayList<N> max = new ArrayList<>();
         ArrayList<N> nodes = new ArrayList<>(getNodes());
-        INode m = nodes.get(0);
+        N m = nodes.get(0);
         HashMap<N, Integer> degCount = new HashMap<>();
         for (E e : getEdges()) {
             N f = e.from();
@@ -144,7 +145,7 @@ public class Graph<N extends INode, E extends IEdge<N>> implements IGraph<N,E> {
     public ArrayList<N> getMinDegreeNode() {
         ArrayList<N> min = new ArrayList<>();
         ArrayList<N> nodes = new ArrayList<>(getNodes());
-        INode m = nodes.get(0);
+        N m = nodes.get(0);
         HashMap<N, Integer> degCount = new HashMap<>();
         for (E e : getEdges()) {
             N f = e.from();

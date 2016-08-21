@@ -2,8 +2,6 @@ package jgh.javagraph.generation;
 
 import jgh.javagraph.Edge;
 import jgh.javagraph.Graph;
-import jgh.javagraph.IEdge;
-import jgh.javagraph.INode;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -26,7 +24,7 @@ public class RandomGeneration {
      *                 to be in range [0,1]
      * @return randomly generated graph on the given nodes.
      */
-    public static <N extends INode> Graph<N,Edge<N>> generateRandomGraph(HashSet<N> nodes, float edgeProb) {
+    public static <N> Graph<N,Edge<N>> generateRandomGraph(HashSet<N> nodes, float edgeProb) {
         float ep = edgeProb;
         ep = ep < 0 ? 0 : ep > 1.0f ? 1.0f : ep;
         Graph<N,Edge<N>> compG = CompleteGeneration.create(nodes);

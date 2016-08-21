@@ -1,7 +1,6 @@
 package jgh.javagraph.tsp;
 
 import jgh.javagraph.Graph;
-import jgh.javagraph.INode;
 import jgh.javagraph.WeightedEdge;
 import jgh.javagraph.algorithms.AlgorithmException;
 import jgh.javagraph.algorithms.Utilities;
@@ -15,7 +14,7 @@ import java.util.*;
  * <br>
  * This is based on the Genetic Algorithm example in <i>Introduction to Neural Networks with Java</i>.
  */
-public class TspSolver<N extends INode, E extends WeightedEdge<N>> {
+public class TspSolver<N, E extends WeightedEdge<N>> {
 
     // graph to solve.
     private Graph<N,E> mGraph;
@@ -91,7 +90,7 @@ public class TspSolver<N extends INode, E extends WeightedEdge<N>> {
 
         int[] bestPath = mChromosomes.get(0).getAllNodes();
         for (int nodeIndex : bestPath) {
-            System.out.println("node " + mNodeList.get(nodeIndex).getLabel());
+            //System.out.println("node " + mNodeList.get(nodeIndex).getLabel());
         }
         System.out.println("Cost is "+mChromosomes.get(0).getCost());
     }

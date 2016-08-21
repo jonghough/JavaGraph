@@ -1,9 +1,6 @@
 package jgh.javagraph.algorithms;
 
-import jgh.javagraph.Graph;
-import jgh.javagraph.IEdge;
-import jgh.javagraph.IGraph;
-import jgh.javagraph.INode;
+import jgh.javagraph.*;
 
 import java.lang.reflect.Array;
 import java.util.*;
@@ -30,7 +27,7 @@ public class Cycles {
      * @param <E>   Edge type
      * @return List of list of nodes, in cyclic order.
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<ArrayList<N>> findAllCyclesInGraph(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> ArrayList<ArrayList<N>> findAllCyclesInGraph(Graph<N,E> graph) {
         //get the maximally connected subgraphs and find cycles.
         ArrayList<Graph<N,E>> graphList = Connectivity.getMaximalConnectedSubgraphs(graph);
         ArrayList<ArrayList<N>> cycleList = new ArrayList<ArrayList<N>>();
@@ -49,12 +46,11 @@ public class Cycles {
      * @param <E>   Edge type
      * @return List of cycles
      */
-    private static <N extends INode, E extends IEdge<N>> ArrayList<ArrayList<N>> findAllCycles(Graph<N,E> graph) {
+    private static <N, E extends IEdge<N>> ArrayList<ArrayList<N>> findAllCycles(Graph<N,E> graph) {
 
-
-        //set the nodes
-        for (N n : graph.getNodes()) {
-            n.setVisited(false);
+        HashMap<E,EdgeData<E>> edgeMap = new HashMap<>();
+        for(E e : graph.getEdges()){
+            edgeMap.put(e, new EdgeData<E>(e));
         }
 
         //get the edges and nodes. We choose an arbitrary node as the first node.
@@ -69,7 +65,7 @@ public class Cycles {
         for (N adj : adjacent) {
             Stack<N> path = new Stack<N>();
             path.add(first);
-            cycleList.addAll(addToPath(graph, first, adj, path));
+            cycleList.addAll(addToPath(graph, edgeMap, first, adj, path));
         }
 
         // Transform the list of cycles into wrapped lists, merge the duplicates,
@@ -88,13 +84,14 @@ public class Cycles {
      * Add the current node to the current path, and search for cycles from adjacent nodes.
      *
      * @param graph
+     * @param edgeMap
      * @param previous
      * @param current
      * @param path
      * @param <E>
      * @return
      */
-    private static <N extends INode, E extends IEdge<N>> ArrayList<ArrayList<N>> addToPath(Graph<N,E> graph, INode previous,
+    private static <N, E extends IEdge<N>> ArrayList<ArrayList<N>> addToPath(Graph<N,E> graph, HashMap<E,EdgeData<E>> edgeMap, N previous,
                                                                            N current, Stack<N> path) {
 
         ArrayList<ArrayList<N>> cycleList = new ArrayList<ArrayList<N>>();
@@ -118,17 +115,17 @@ public class Cycles {
         //add the current node to the stack and search.
         path.push(current);
         for (E e : incident) {
-            if (e.isVisited() == false) {
-                e.setVisited(true);
+            if (edgeMap.get(e).isVisited() == false) {
+                edgeMap.get(e).setVisited(true);
                 HashSet<N> searchNodes = new HashSet<>(e.nodes());
                 searchNodes.remove(current);
                 for (N n : searchNodes) {
                     if (n != previous) {
-                        cycleList.addAll(addToPath(graph, current, n, path));
+                        cycleList.addAll(addToPath(graph, edgeMap, current, n, path));
                     }
                 }
             }
-            e.setVisited(false);
+            edgeMap.get(e).setVisited(false);
         }
         // pop current node off stack.
         path.pop();

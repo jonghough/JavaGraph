@@ -3,14 +3,12 @@ package jgh.javagraph.linegraph;
 import jgh.javagraph.Graph;
 import jgh.javagraph.IEdge;
 import jgh.javagraph.IGraph;
-import jgh.javagraph.INode;
 import jgh.javagraph.algorithms.GraphSearch;
 import jgh.javagraph.algorithms.Utilities;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * <i>Line Graph, L(G),</i> of a graph <i>G</i>, defined to be the graph created by
@@ -32,7 +30,7 @@ public final class LineGraph<E extends IEdge> {
      * @param <E>     the edge type.
      * @return Line Graph, <i>L(G)</i>, of the original graph, <i>G</i>.
      */
-    public static <N extends INode, E extends IEdge<N>> Graph<N,E> createLineGraph(Graph<N,E> graph, ILineGraphBuilder<N,E> builder) {
+    public static <N, E extends IEdge<N>> Graph<N,E> createLineGraph(Graph<N,E> graph, ILineGraphBuilder<N,E> builder) {
 
         final HashMap<E, N> edgeNodeMap = new HashMap<E, N>();
         final HashMap<Integer, E> edgeHashMap = new HashMap<Integer, E>();
@@ -70,7 +68,7 @@ public final class LineGraph<E extends IEdge> {
      *
      * @param <E> edge type
      */
-    public interface ILineGraphBuilder<N extends INode, E extends IEdge<N>> {
+    public interface ILineGraphBuilder<N, E extends IEdge<N>> {
 
         /**
          * Creates a node of the LineGraph from the given edge. The edges of the

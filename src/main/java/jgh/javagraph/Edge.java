@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * Edge type. This is the basic edge type.
  */
-public class Edge<N extends INode> extends IEdge<N> {
+public class Edge<N> extends IEdge<N> {
 
     /**
      * The <i>from</i> node. For undirected edges the
@@ -29,12 +29,8 @@ public class Edge<N extends INode> extends IEdge<N> {
      */
     protected HashSet<N> mNodes;
 
-    /**
-     * Visited flag. Flag is set with <code>setVisited(boolean visited)</code> method.
-     * The meaning of the flag can be implementation and algorithm dependent. e.g. for
-     * Dijkstra's algorithm an edge is visited after the algorithm passes it once.
-     */
-    protected boolean mVisited = false;
+
+
 
     /**
      * Constructor for <code>Edge</code> taking the <i>from</i> and <i>to</i> nodes
@@ -72,13 +68,5 @@ public class Edge<N extends INode> extends IEdge<N> {
         visitor.visit(this);
     }
 
-    @Override
-    public boolean isVisited() {
-        return mVisited;
-    }
 
-    @Override
-    public void setVisited(boolean visited) {
-        mVisited = visited;
-    }
 }

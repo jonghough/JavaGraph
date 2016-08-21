@@ -1,6 +1,5 @@
 import jgh.javagraph.Edge;
 import jgh.javagraph.Graph;
-import jgh.javagraph.INode;
 import jgh.javagraph.algorithms.AlgorithmException;
 import jgh.javagraph.generation.CompleteGeneration;
 import jgh.javagraph.generation.CycleGeneration;

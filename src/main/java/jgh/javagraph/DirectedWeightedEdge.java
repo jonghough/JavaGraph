@@ -4,7 +4,7 @@ package jgh.javagraph;
  * Implementation of a Directed, Weighted Edge. Direction can either be <i>forwards</i>, from <i>from</i> to
  * <i>to</i> nodes, <i>backwards</i> (opposite direction), or <i>both</i>, bi-directional.
  */
-public final class DirectedWeightedEdge<N extends INode> extends WeightedEdge<N> {
+public final class DirectedWeightedEdge<N> extends WeightedEdge<N> {
 
     /**
      * Direction of the edge, either <code>FORWARDS</code>, <code>BACKWARDS</code>, or

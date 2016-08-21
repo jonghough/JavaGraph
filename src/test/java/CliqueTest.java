@@ -17,6 +17,8 @@ public class CliqueTest {
     public void cliqueTest1() {
         Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>> g = SpecialGeneration.generateBarbellGraph(10);
         ArrayList<HashSet<NodeGeneration.BasicNode>> cliques = Cliques.findMaximalCliques(g);
+
+        Assert.assertTrue(cliques.size() == 3);
     }
 
     @Test
@@ -37,5 +39,6 @@ public class CliqueTest {
         edges.add(e2);edges.add(e3);edges.add(e4);edges.add(e5);edges.add(e6);edges.add(e7);
         Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>> g = new Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>>(edges);
         ArrayList<HashSet<NodeGeneration.BasicNode>> cliques = Cliques.findMaximalCliques(g);
+
     }
 }

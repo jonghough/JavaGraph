@@ -2,12 +2,11 @@ package jgh.javagraph.tsp;
 
 
 import jgh.javagraph.Graph;
-import jgh.javagraph.INode;
 import jgh.javagraph.WeightedEdge;
 
 import java.util.ArrayList;
 
-public class Chromosome<N extends INode, W extends WeightedEdge<N>> implements Comparable<Chromosome<N,W>> {
+public class Chromosome<N, W extends WeightedEdge<N>> implements Comparable<Chromosome<N,W>> {
 
     /**
      * Array of the indices of the nodes in the original

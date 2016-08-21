@@ -53,10 +53,10 @@ public class BellmanFordTest {
         Assert.assertTrue("contains A B C D E F G H and size is 8", path.contains(b1) && path.contains(b2) &&
                 path.contains(b3) && path.contains(b4) && path.contains(b5) && path.contains(b6) && path.contains(b7)
                 && path.contains(b8) && path.size() == 8);
-        System.out.println("path len  "+path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  "+path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
         } catch (AlgorithmException e) {
             Assert.fail("Failure: Bellman Ford test algorithm exception, "+e.getMessage());
         }

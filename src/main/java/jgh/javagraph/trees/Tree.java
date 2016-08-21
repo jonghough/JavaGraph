@@ -3,7 +3,6 @@ package jgh.javagraph.trees;
 import jgh.javagraph.Graph;
 import jgh.javagraph.IEdge;
 import jgh.javagraph.IGraph;
-import jgh.javagraph.INode;
 import jgh.javagraph.algorithms.Connectivity;
 import jgh.javagraph.algorithms.GraphSearch;
 
@@ -22,7 +21,7 @@ public class Tree {
      * @param <E>   Edge type
      * @return True if the graph is a tree, false otherwise.
      */
-    public static <N extends INode, E extends IEdge<N>> boolean isTree(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> boolean isTree(Graph<N,E> graph) {
         boolean graphIsTree = false;
         // iff connected graph and size of edge set is size of node set minus one,
         // the graph is a tree.
@@ -43,15 +42,15 @@ public class Tree {
      * @param <E>
      * @return
      */
-    public static <N extends INode, E extends IEdge<N>> Graph<N,E> generateTremauxTree(Graph<N,E> graph, N baseNode) {
+    public static <N, E extends IEdge<N>> Graph<N,E> generateTremauxTree(Graph<N,E> graph, N baseNode) {
         ArrayList<E> edges = new ArrayList<>();
 
-        final N[] store = (N[])new INode[1];
-        store[0] = baseNode;
+        final ArrayList<N> store = new ArrayList<>();
+        store.add(baseNode);
         GraphSearch.searchDepthFirst(graph, baseNode, new GraphSearch.INextNode<N,E>() {
             @Override
             public void onNextNode(IGraph<N,E> g, N p, N c) {
-                INode lastNode = store[0];
+                N lastNode = store.get(0);
                 //add the edge connecting last edge to this current edge.
                 for (E e : graph.getEdges()) {
                     if ((e.from() == c && e.to() == lastNode)
@@ -61,7 +60,7 @@ public class Tree {
                     }
                 }
 
-                store[0] = c;
+                store.add(0, c);
             }
 
             @Override

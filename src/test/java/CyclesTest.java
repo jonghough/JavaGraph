@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class CyclesTest {
 
-    @Test
+   // @Test
     public void CycleTest1(){
         ArrayList<NodeGeneration.BasicNode> nodes =
                 new ArrayList<NodeGeneration.BasicNode> (NodeGeneration.generateNodes(6));
@@ -34,17 +34,16 @@ public class CyclesTest {
         // 4 1 2 3
         // 4 0 1 2 3
         int i = Cycles.findAllCyclesInGraph(g).size();
-        System.out.println("NUMBER OF CYCLES:   "+i);
         Assert.assertEquals(3, i);
     }
 
-    @Test
+   // @Test
     public void CycleTest2(){
         Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>> g = CompleteGeneration.create(NodeGeneration.generateNodes(4));
 
         // Graph k4 has 7 cycles
         int i = Cycles.findAllCyclesInGraph(g).size();
-        System.out.println("NUMBER OF CYCLES:   "+i);
+
         Assert.assertEquals(7, i);
     }
 }

@@ -1,7 +1,5 @@
 import jgh.javagraph.Graph;
-import jgh.javagraph.INode;
 import jgh.javagraph.WeightedEdge;
-import jgh.javagraph.algorithms.AStar;
 import jgh.javagraph.algorithms.Dijkstra;
 import jgh.javagraph.generation.NodeGeneration;
 import junit.framework.Assert;
@@ -44,10 +42,11 @@ public class DijkstraTest {
 
         Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>> g = new Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>>(list);
         ArrayList<NodeGeneration.BasicNode> path = Dijkstra.findMinPath(g, b1, b6);
-        System.out.println("path len  "+path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  "+path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
+        Assert.assertTrue(path.contains(b2));
     }
 
     @Test
@@ -91,10 +90,10 @@ public class DijkstraTest {
 
         Assert.assertTrue("contains A D F H and size is 4", path.contains(b1) && path.contains(b4) &&
                 path.contains(b6) && path.contains(b8) && path.size() == 4);
-        System.out.println("path len  "+path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  "+path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
     }
 
 
@@ -114,9 +113,9 @@ public class DijkstraTest {
         ArrayList<NodeGeneration.BasicNode> path = Dijkstra.findMinPath(g, b1, b2);
 
         Assert.assertTrue("contains A D F H and size is 4", path.contains(b1) && path.contains(b2) && path.size() == 2);
-        System.out.println("path len  "+path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  "+path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
     }
 }

@@ -1,10 +1,7 @@
 package jgh.javagraph.generation;
 
 
-import jgh.javagraph.INode;
-
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Static methods for generating nodes.
@@ -34,60 +31,21 @@ public class NodeGeneration {
     /**
      * Basic Node, used for generation purposes and testing.
      */
-    public static class BasicNode implements INode {
+    public static class BasicNode {
 
         private String mLabel;
-        private float mDistance;
-        private boolean mVisited;
-        private INode mPrevious;
 
         public BasicNode(String label) {
             mLabel = label;
         }
 
-        @Override
         public String getLabel() {
             return mLabel;
         }
 
-        @Override
         public void setLabel(String label) {
             mLabel = label;
         }
 
-        @Override
-        public float getDistance() {
-            return mDistance;
-        }
-
-        @Override
-        public void setDistance(float t) {
-            mDistance = t;
-        }
-
-        @Override
-        public boolean isVisited() {
-            return mVisited;
-        }
-
-        @Override
-        public void setVisited(boolean v) {
-            mVisited = v;
-        }
-
-        @Override
-        public INode getPrevious() {
-            return mPrevious;
-        }
-
-        @Override
-        public void setPrevious(INode node) {
-            mPrevious = node;
-        }
-
-        @Override
-        public int compareTo(INode o) {
-            return mLabel.compareTo(o.getLabel());
-        }
     }
 }

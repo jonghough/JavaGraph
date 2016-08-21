@@ -1,15 +1,9 @@
 package jgh.javagraph.algorithms;
 
-import jgh.javagraph.Direction;
-import jgh.javagraph.Graph;
-import jgh.javagraph.IGraph;
-import jgh.javagraph.INode;
+import jgh.javagraph.*;
 import jgh.javagraph.flownetwork.CapacityEdge;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -36,23 +30,26 @@ public class FordFulkerson {
      * @param finishNode sink node
      * @return True if flow found, false otherwise.
      */
-    public static <N extends INode> boolean findMaxFlow(Graph<N,CapacityEdge<N>> graph, N startNode, N finishNode) {
+    public static <N> boolean findMaxFlow(Graph<N,CapacityEdge<N>> graph, N startNode, N finishNode) {
         // find some initial path.
+        HashMap<N,NodeData<N>> nodeMap = new HashMap<N,NodeData<N>>();
         for (N n : graph.getNodes()) {
-            n.setVisited(false);
+            NodeData<N> nd = new NodeData<N>(n);
+            nodeMap.put(n, nd);
+            if(n == startNode){
+                nd.setVisited(true);
+            }
         }
         for (CapacityEdge e : graph.getEdges()) {
             e.setFlowDirection(Direction.FORWARDS);
         }
 
-        startNode.setVisited(true);
-
         ArrayList<CapacityEdge<N>> allEdges = new ArrayList<CapacityEdge<N>>(graph.getEdges());
-        ArrayList<CapacityEdge<N>> initialPath = findPath(allEdges,
+        ArrayList<CapacityEdge<N>> initialPath = findPath(nodeMap, allEdges,
                 startNode, finishNode);
 
         while (initialPath != null) {
-System.out.println("looping");
+            System.out.println("looping");
             N last = startNode;
             float minFlow = initialPath.stream().map(e -> e.getResidualFlow()).min(Comparator.<Float>naturalOrder()).get();
             List<CapacityEdge> minNode = initialPath.stream().filter(
@@ -67,18 +64,18 @@ System.out.println("looping");
             }
 
             for (N n : graph.getNodes()) {
-                n.setVisited(false);
+                nodeMap.get(n).setVisited(false);
             }
             for (CapacityEdge e : graph.getEdges()) {
                 e.setFlowDirection(Direction.FORWARDS);
             }
-            startNode.setVisited(true);
+            new NodeData<N>(startNode).setVisited(true);
             //augment the path.
             initialPath.clear();
             allEdges.clear();
             allEdges = new ArrayList<CapacityEdge<N>>(graph.getEdges());
             allEdges.remove(minNode.get(0));
-            initialPath = findPath(allEdges,
+            initialPath = findPath(nodeMap, allEdges,
                     startNode, finishNode);
         }
 
@@ -97,13 +94,14 @@ System.out.println("looping");
      * @return a list of <code>CapacityEdge</code>s from the start node to the finish node,
      * if such a path can be found. Otherwise, returns null.
      */
-    private static <N extends INode> ArrayList<CapacityEdge<N>> findPath(ArrayList<CapacityEdge<N>> edges, N start, N finish) {
+    private static <N> ArrayList<CapacityEdge<N>> findPath(HashMap<N, NodeData<N>> nodeMap,
+                                                                         ArrayList<CapacityEdge<N>> edges, N start, N finish) {
 
         //filter only the edges coming from the start node
         Stream<CapacityEdge<N>> edgeStream = Utilities.getIncidentEdges(edges, start).stream().filter(e -> {
-            if (e.from() == start && !e.to().isVisited())
+            if (e.from() == start && !nodeMap.get(e.to()).isVisited())
                 return true;
-            else if (e.to() == start && !e.from().isVisited())
+            else if (e.to() == start && !nodeMap.get(e.from()).isVisited())
                 return true;
 
             else return false;
@@ -120,7 +118,7 @@ System.out.println("looping");
                 if (selectedEdge.getResidualFlow() <= 0) {
                     continue;
                 }
-                selectedEdge.to().setVisited(true);
+                nodeMap.get(selectedEdge.to()).setVisited(true);
 
                 // Flow direction is backwards if going from from() to to()
                 // nodes. This changes the residual capacity calculation.
@@ -140,7 +138,7 @@ System.out.println("looping");
                     if (next == start) {
                         next = selectedEdge.from();
                     }
-                    ArrayList<CapacityEdge<N>> subPath = findPath(edgesCopy, next, finish);
+                    ArrayList<CapacityEdge<N>> subPath = findPath(nodeMap, edgesCopy, next, finish);
 
                     if (subPath != null && !subPath.isEmpty()) {
                         ArrayList<CapacityEdge<N>> path = new ArrayList<CapacityEdge<N>>();

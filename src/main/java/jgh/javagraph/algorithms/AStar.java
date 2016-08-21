@@ -20,7 +20,7 @@ public class AStar {
      * @param <E>       Weighted edge type
      * @return minimum path list.
      */
-    public static <N extends INode, E extends WeightedEdge<N>> ArrayList<N> findMinPath(Graph<N, E> graph, N nodeS, N nodeF, IAStarHeuristic heuristic) {
+    public static <N, E extends WeightedEdge<N>> ArrayList<N> findMinPath(Graph<N, E> graph, N nodeS, N nodeF, IAStarHeuristic heuristic) {
 
         // Instantiate the openSet and closedSet. The openSet is the collection
         // of currently searchable nodes. Closed Set is the collection of already
@@ -37,16 +37,24 @@ public class AStar {
         HashMap<N, Float> gScoreMap = new HashMap<N, Float>();
         HashMap<N, Float> fScoreMap = new HashMap<N, Float>();
 
+
+        HashMap<N,NodeData<N>> nodeMap = new HashMap<N,NodeData<N>>();
+
         // Initialize the score maps.
         for (N t : graph.getNodes()) {
-            gScoreMap.put(t, Float.MAX_VALUE);
-            fScoreMap.put(t, 0f);
-            t.setPrevious(t);
-        }
+            NodeData<N> nodeData = new NodeData<N>(t);
+            if(t.equals(nodeS)){
+                gScoreMap.put(t, 0f);
+                fScoreMap.put(t, 0f + heuristic.getHeuristic(nodeS, nodeF));
+            }
+            else {
+                gScoreMap.put(t, Float.MAX_VALUE);
 
-        // distance function f = g + h
-        gScoreMap.put(nodeS, 0f);
-        fScoreMap.put(nodeS, 0f + heuristic.getHeuristic(nodeS, nodeF));
+                fScoreMap.put(t, 0f);
+            }
+            nodeData.setPrevious(Optional.of(t));
+            nodeMap.put(t, nodeData);
+        }
 
         //begin the search.
         while (openSet.size() > 0) {
@@ -80,18 +88,18 @@ public class AStar {
                         float tmp = gScoreMap.get(current) + u.getWeight();// g + h sum.
                         if (openSet.contains(t) == false) {
 
-                            t.setPrevious(current);
+                            nodeMap.get(t).setPrevious(Optional.of(current));
                             openSet.add(t);
                             gScoreMap.put(t, tmp);
                             fScoreMap.put(t, tmp + heuristic.getHeuristic(t, nodeF));
-                            t.setDistance(tmp);
+                            nodeMap.get(t).setDistance(tmp);
                         } else {
                             float currentScore = gScoreMap.get(t);
                             if (currentScore > tmp) {
-                                t.setPrevious(current);
+                                nodeMap.get(t).setPrevious(Optional.of(current));
                                 gScoreMap.put(t, tmp);
                                 fScoreMap.put(t, tmp + heuristic.getHeuristic(t, nodeF));
-                                t.setDistance(tmp);
+                                nodeMap.get(t).setDistance(tmp);
                             }
                         }
                     }
@@ -100,10 +108,10 @@ public class AStar {
         }
 
 
-        N p = (N)nodeF.getPrevious();
-        while (p != null && p != p.getPrevious()) {
+        N p = (N)nodeMap.get(nodeF).getPrevious().get();
+        while (p != null && p != nodeMap.get(p).getPrevious().get()) {
             shortestPath.add(p);
-            p = (N)p.getPrevious();
+            p = (N)nodeMap.get(p).getPrevious().get();
         }
         shortestPath.add(nodeS);
         Collections.reverse(shortestPath);
@@ -115,7 +123,7 @@ public class AStar {
      * Heuristic distance estimate for each pair of nodes in the graph. Necessary
      * for <i>A Star</i> algorithm, to giv some initial guess at the distances.
      */
-    public interface IAStarHeuristic<N extends INode> {
+    public interface IAStarHeuristic<N> {
 
         /**
          * Returns the heuristic measure f distance between a given <code>INode</code>, <code>t</code>, and the

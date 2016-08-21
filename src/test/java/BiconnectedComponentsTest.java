@@ -23,11 +23,11 @@ public class BiconnectedComponentsTest {
         generstor.findBiconnectedComponents();
         HashSet<HashSet<Edge<NodeGeneration.BasicNode>>> comps = generstor.getBiconnectedComponents();
         System.out.println("biconnected compoents size is "+comps.size());
-        for(HashSet<Edge<NodeGeneration.BasicNode>> set : comps){
-            System.out.println("===============");
-            for(Edge<NodeGeneration.BasicNode> edge : set){
-                System.out.println("edge: "+edge.from().getLabel()+", "+edge.to().getLabel());
-            }
-        }
+//        for(HashSet<Edge<NodeGeneration.BasicNode>> set : comps){
+//            System.out.println("===============");
+//            for(Edge<NodeGeneration.BasicNode> edge : set){
+//                System.out.println("edge: "+edge.from().getLabel()+", "+edge.to().getLabel());
+//            }
+//        }
     }
 }

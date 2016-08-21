@@ -2,9 +2,8 @@ package jgh.javagraph.mincut;
 
 
 import jgh.javagraph.Edge;
-import jgh.javagraph.INode;
 
-public class ModifiableEdge<N extends INode> extends Edge<N> {
+public class ModifiableEdge<N> extends Edge<N> {
 
     private N mOriginalFrom;
     private N mOriginalTo;

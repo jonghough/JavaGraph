@@ -3,7 +3,6 @@ package jgh.javagraph.mincut;
 
 import jgh.javagraph.Graph;
 import jgh.javagraph.IEdge;
-import jgh.javagraph.INode;
 import jgh.javagraph.algorithms.Utilities;
 
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ public class MinCut {
      * @param <E>   Edge type
      * @return List of edges in the (minimum) cut.
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<ModifiableEdge<N>> findMinCut(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> ArrayList<ModifiableEdge<N>> findMinCut(Graph<N,E> graph) {
         ArrayList<ModifiableEdge<N>> edgeList = new ArrayList<ModifiableEdge<N>>();
         for (E e : graph.getEdges()) {
             ModifiableEdge me = new ModifiableEdge(e.from(), e.to());
@@ -48,7 +47,7 @@ public class MinCut {
      * @param edge
      * @param <E>
      */
-    private static <N extends INode, E extends ModifiableEdge<N>> void contractEdge(Graph<N,E> graph, E edge) {
+    private static <N, E extends ModifiableEdge<N>> void contractEdge(Graph<N,E> graph, E edge) {
         if (graph.getEdges().contains(edge) == false)
             throw new IllegalArgumentException("Edge does not exist on this graph.");
         //arbitrary, choose the form node to make the new node.

@@ -1,14 +1,13 @@
 package jgh.javagraph.trees;
 
 import jgh.javagraph.IEdge;
-import jgh.javagraph.INode;
 
 import java.util.Collection;
 import java.util.HashSet;
 
 
 
-public class DisjointSet<N extends INode, E extends IEdge<N>> {
+public class DisjointSet<N, E extends IEdge<N>> {
 
 
     private HashSet<LinkedNode> linkedSets;
@@ -93,7 +92,7 @@ public class DisjointSet<N extends INode, E extends IEdge<N>> {
 
     }
 
-    public class LinkedNode<N extends INode, E extends IEdge<N>>{
+    public class LinkedNode<N, E extends IEdge<N>>{
         public E edge;
         public LinkedNode<N,E> root;
         public LinkedNode<N,E> previous;

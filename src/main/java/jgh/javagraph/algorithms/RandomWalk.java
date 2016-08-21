@@ -1,9 +1,7 @@
 package jgh.javagraph.algorithms;
 
-import Jama.Matrix;
 import jgh.javagraph.Graph;
 import jgh.javagraph.IEdge;
-import jgh.javagraph.INode;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -22,7 +20,7 @@ public class RandomWalk {
      * @param <E>
      * @return
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<N> generateRandomWalk(Graph<N, E> graph, int steps) {
+    public static <N, E extends IEdge<N>> ArrayList<N> generateRandomWalk(Graph<N, E> graph, int steps) {
         Iterator<N> iterator = graph.getNodes().iterator();
         iterator.next();
         N start = iterator.next();

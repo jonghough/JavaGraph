@@ -38,14 +38,4 @@ public class DelaunayEdge extends IEdge<Node2d> {
     public void accept(IEdgeVisitor visitor) {
 
     }
-
-    @Override
-    public boolean isVisited() {
-        return mEdge.isVisited();
-    }
-
-    @Override
-    public void setVisited(boolean visited) {
-        mEdge.setVisited(visited);
-    }
 }

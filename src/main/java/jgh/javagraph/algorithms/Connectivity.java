@@ -1,9 +1,6 @@
 package jgh.javagraph.algorithms;
 
-import jgh.javagraph.Graph;
-import jgh.javagraph.IEdge;
-import jgh.javagraph.IGraph;
-import jgh.javagraph.INode;
+import jgh.javagraph.*;
 
 import java.util.*;
 import java.util.stream.Stream;
@@ -24,14 +21,14 @@ public class Connectivity {
      * @param <E>   Edge type
      * @return True if the graph is connected, false otherwise.
      */
-    public static <N extends INode, E extends IEdge<N>> boolean isConnected(Graph<N,E> graph) {
-        //Java 8 (still) doesn't allow closures so this is the only way I could think
-        //to update some counter.
+    public static <N, E extends IEdge<N>> boolean isConnected(Graph<N,E> graph) {
+
         final int[] dummy = new int[1];
         dummy[0] = 0;
-        GraphSearch.searchBreadthFirst(graph, new GraphSearch.INextNode() {
+
+        GraphSearch.INextNode<N,E> nextNode = new GraphSearch.INextNode<N, E>() {
             @Override
-            public void onNextNode(IGraph graph, INode previous, INode current) {
+            public void onNextNode(IGraph<N, E> graph, N previous, N current) {
                 int counter = dummy[0];
                 dummy[0] = counter + 1;
             }
@@ -40,7 +37,9 @@ public class Connectivity {
             public boolean forceStop() {
                 return false;
             }
-        });
+        };
+
+        GraphSearch.searchBreadthFirst(graph, nextNode);
 
         return graph.getNodes().size() == dummy[0];
     }
@@ -53,16 +52,20 @@ public class Connectivity {
      *
      * @return List of connected components
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<ArrayList<N>> getConnectedComponents(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> ArrayList<ArrayList<N>> getConnectedComponents(Graph<N,E> graph) {
         ArrayList<ArrayList<N>> connectedComponents = new ArrayList<ArrayList<N>>();
 
-        N n = getFirstUnvisitedNode(graph);
+        HashMap<N, NodeData<N>> nodeMap = new HashMap<>();
+        for(N n : graph.getNodes()){
+            nodeMap.put(n, new NodeData<N>(n));
+        }
+        N n = getFirstUnvisitedNode(graph, nodeMap);
         while (true) {
 
             ArrayList<N> conn = getConnected(graph, n);
             conn.add(n);
             connectedComponents.add(conn);
-            n = getFirstUnvisitedNode(graph);
+            n = getFirstUnvisitedNode(graph, nodeMap);
             if (n == null)
                 break;
         }
@@ -79,7 +82,7 @@ public class Connectivity {
      * @param <E>   Edge type
      * @return list of subgraphs.
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<Graph<N,E>> getMaximalConnectedSubgraphs(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> ArrayList<Graph<N,E>> getMaximalConnectedSubgraphs(Graph<N,E> graph) {
         ArrayList<ArrayList<N>> connectedNodes = getConnectedComponents(graph);
         ArrayList<E> edgeList = new ArrayList<E>(graph.getEdges());
         ArrayList<Graph<N,E>> graphList = new ArrayList<Graph<N,E>>();
@@ -94,21 +97,6 @@ public class Connectivity {
     }
 
 
-    /**
-     * Returns the first unvisited edge on the given graph. If no such edge exists, then
-     * returns null.
-     *
-     * @param graph
-     * @param <E>   Type of edge
-     * @return Edge object.
-     */
-    private static <N extends INode, E extends IEdge<N>> E getFirstUnvisited(Graph<N,E> graph) {
-        for (E d : graph.getEdges()) {
-            if (d.isVisited() == false)
-                return d;
-        }
-        return null;
-    }
 
     /**
      * Searches the graph's node set, in an unspecified order, and retrieves
@@ -119,11 +107,13 @@ public class Connectivity {
      * @param <E>   Edge type
      * @return An unvisited node if one exists, otherwise returns <code>null</code>.
      */
-    private static <N extends INode, E extends IEdge<N>> N getFirstUnvisitedNode(Graph<N,E> graph) {
-        ArrayList<N> nodeL = new ArrayList<>(graph.getNodes());
-        for (N n : nodeL) {
-            if (n.isVisited() == false)
-                return n;
+    private static <N, E extends IEdge<N>> N getFirstUnvisitedNode(Graph<N,E> graph, HashMap<N, NodeData<N>> nodeMap) {
+
+        Iterator<Map.Entry<N,NodeData<N>>> iterator = nodeMap.entrySet().iterator();
+        while(iterator.hasNext()) {
+            Map.Entry<N,NodeData<N>> npair = iterator.next();
+            if (npair.getValue().isVisited() == false)
+                return npair.getKey();
         }
         return null;
     }
@@ -137,14 +127,22 @@ public class Connectivity {
      * @param <E>   Edge type, extends IEdge interface
      * @return ArrayList of Edges in the connected component containing <i>edge</i>.
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<E> getConnected(Graph<N,E> graph, E edge) {
-        edge.setVisited(true);
+    public static <N, E extends IEdge<N>> ArrayList<E> getConnected(Graph<N,E> graph, E edge) {
+        HashMap<E, EdgeData<E>> edgeMap = new HashMap<>();
+        for(E e : graph.getEdges()) {
+            EdgeData<E> ed = new EdgeData<>(e);
+            if(e == edge) {
+                ed.setVisited(true);
+            }
+
+            edgeMap.put(e,ed);
+        }
 
         Collection<E> nextArr = Utilities.getIncidentEdges(new ArrayList(graph.getEdges()), edge);
         ArrayList<E> connList = new ArrayList<E>();
         connList.add(edge);
         for (E e : nextArr) {
-            if (e.isVisited() == false) {
+            if (!edgeMap.get(e).isVisited()) {
                 connList.addAll(getConnected(graph, e));
             }
         }
@@ -161,46 +159,30 @@ public class Connectivity {
      * @return <code>ArrayList</code> of nodes connected to the given node. If the node is not
      * connected to any other node then the list will be empty.
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<N> getConnected(Graph<N,E> graph, INode node) {
-        node.setVisited(true);
+    public static <N, E extends IEdge<N>> ArrayList<N> getConnected(Graph<N,E> graph,  N node) {
+
+        HashMap<N, NodeData<N>> nodeMap = new HashMap<>();
+        for(N n : graph.getNodes()){
+            nodeMap.put(n, new NodeData<N>(n));
+        }
+        nodeMap.get(node).setVisited(true);
+        return getConnected(graph, nodeMap, node);
+    }
+
+    private static <N, E extends IEdge<N>> ArrayList<N> getConnected(Graph<N,E> graph,
+                                                                                  HashMap<N, NodeData<N>> nodeMap,  N node) {
+        nodeMap.get(node).setVisited(true);
         ArrayList<N> connList = new ArrayList<N>();
-        ArrayList<N> adjNodes = Utilities.getAdjacentUnvisited(new ArrayList(graph.getEdges()), node);
+        ArrayList<N> adjNodes = Utilities.getAdjacentUnvisited(nodeMap, new ArrayList(graph.getEdges()), node);
         connList.addAll(adjNodes);
         for (N t : adjNodes) {
-            t.setVisited(true);
+            nodeMap.get(t).setVisited(true);
         }
         for (N t : adjNodes) {
-            connList.addAll(getConnected(graph, t));
+            connList.addAll(getConnected(graph, nodeMap, t));
         }
 
         return connList;
     }
 
-    private static <N extends INode, E extends IEdge<N>> ArrayList<N> visit(N current,
-                                                                            Graph<N,E> graph,
-                                                                            HashMap<N, BiconnectedInfo> bMap,
-                                                                            int counter){
-
-        current.setVisited(true);
-        counter++;
-        bMap.get(current).depth = counter;
-        bMap.get(current).lower = counter;
-
-        Stack<N> stack = new Stack<>();
-
-        ArrayList<N> adjNodes = Utilities.getAdjacent(graph.getEdges(), current);
-        for(N next : adjNodes){
-            if(!next.isVisited()){
-                stack.push(next);
-            }
-        }
-
-        return null;
-    }
-
-
-    private class BiconnectedInfo{
-        int depth = 0;
-        int lower = 0;
-    }
 }

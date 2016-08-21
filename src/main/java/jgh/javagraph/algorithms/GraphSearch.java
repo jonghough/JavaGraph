@@ -24,8 +24,9 @@ public class GraphSearch {
      * @param nextNode Callback interface.
      * @param <E>      Edge type
      */
-    public static <N extends INode, E extends IEdge<N>> void searchBreadthFirst(Graph<N,E> graph, INextNode nextNode) {
+    public static <N, E extends IEdge<N>> void searchBreadthFirst(Graph<N,E> graph, INextNode nextNode) {
         N current = null;
+        HashMap<N,NodeData<N>> nodeMap = new HashMap<N,NodeData<N>>();
         boolean currentSelected = false;
         //find an initial node, and set all nodes to not visited.
         for (N node : graph.getNodes()) {
@@ -33,7 +34,7 @@ public class GraphSearch {
                 currentSelected = true;
                 current = node;
             }
-            node.setVisited(false);
+            nodeMap.put(node, new NodeData<N>(node));
         }
 
         LinkedList<N> nodeQueue = new LinkedList<N>();
@@ -41,19 +42,19 @@ public class GraphSearch {
 
         //apply mNext node function to the initial node.
         nextNode.onNextNode(graph, current, current);
-        current.setVisited(true);
+        nodeMap.get(current).setVisited(true);
 
         while (!nodeQueue.isEmpty()) {
             N n = nodeQueue.pollFirst();
             //get all unvisited adjacent nodes.
-            ArrayList<N> adjNodes = Utilities.getAdjacentUnvisited(graph.getEdges(), n);
+            ArrayList<N> adjNodes = Utilities.getAdjacentUnvisited(nodeMap, graph.getEdges(), n);
 
             for (N m : adjNodes) {
-                if (m.isVisited()) {
+                if (nodeMap.get(m).isVisited()) {
                     continue;
                 } else {
                     nextNode.onNextNode(graph, n, m);
-                    m.setVisited(true);
+                    nodeMap.get(m).setVisited(true);
                     nodeQueue.addLast(m);
 
                     if (nextNode.forceStop())
@@ -77,16 +78,19 @@ public class GraphSearch {
      * @param nextEdge implementation of <code>INextEdge</code> interface.
      * @param <E>      THe edge type.
      */
-    public static <N extends INode, E extends IEdge<N>> void searchEdgesBreadthFirst(Graph<N,E> graph, INextEdge<N, E> nextEdge) {
+    public static <N, E extends IEdge<N>> void searchEdgesBreadthFirst(Graph<N,E> graph, INextEdge<N, E> nextEdge) {
         E current = null;
         boolean currentSelected = false;
+
+        HashMap<E,EdgeData<E>> edgeMap = new HashMap<>();
+
         //find an initial node, and set all nodes to not visited.
         for (E edge : graph.getEdges()) {
             if (!currentSelected) {
                 currentSelected = true;
                 current = edge;
             }
-            edge.setVisited(false);
+            edgeMap.put(edge, new EdgeData<E>(edge));
         }
 
         LinkedList<E> edgeQueue = new LinkedList<E>();
@@ -94,7 +98,7 @@ public class GraphSearch {
 
         //apply mNext node function to the initial node.
         nextEdge.onNextEdge(graph, current, current);
-        current.setVisited(true);
+        edgeMap.get(current).setVisited(true);
 
         while (!edgeQueue.isEmpty()) {
             E e = edgeQueue.pollFirst();
@@ -102,11 +106,11 @@ public class GraphSearch {
             ArrayList<E> incEdges = Utilities.getIncidentEdges(graph.getEdges(), e);
 
             for (E next : incEdges) {
-                if (next.isVisited()) {
+                if (edgeMap.get(next).isVisited()) {
                     continue;
                 } else {
                     nextEdge.onNextEdge(graph, e, next);
-                    next.setVisited(true);
+                    edgeMap.get(next).setVisited(true);
                     edgeQueue.addLast(next);
 
                     if (nextEdge.forceStop())
@@ -128,9 +132,10 @@ public class GraphSearch {
      * @param nextNode Callback interface.
      * @param <E>      Edge type
      */
-    public static <N extends INode,E extends IEdge<N>> void searchDepthFirst(Graph<N,E> graph, INextNode nextNode) {
+    public static <N,E extends IEdge<N>> void searchDepthFirst(Graph<N,E> graph, INextNode nextNode) {
         N current = null;
         boolean currentSelected = false;
+        HashMap<N,NodeData<N>> nodeMap = new HashMap<N,NodeData<N>>();
         //find an initial node, and set all nodes to not visited.
         for (N node : graph.getNodes()) {
             if (!currentSelected) {
@@ -138,14 +143,14 @@ public class GraphSearch {
                 current = node;
 
             }
-            node.setVisited(false);
+            nodeMap.put(node, new NodeData<N>(node));
         }
 
         //DFS
         Stack<N> nodeStack = new Stack<N>();
         nodeStack.push(current);
 
-        iterateDepthFirst(graph, nodeStack, nextNode);
+        iterateDepthFirst(graph, nodeMap, nodeStack, nextNode);
     }
 
     /**
@@ -154,12 +159,18 @@ public class GraphSearch {
      * @param nextNode
      * @param <E>
      */
-    public static <N extends INode, E extends IEdge<N>> void searchDepthFirst(Graph<N,E> graph, N startNode, INextNode nextNode) {
+    public static <N, E extends IEdge<N>> void searchDepthFirst(Graph<N,E> graph, N startNode, INextNode nextNode) {
+
+        HashMap<N,NodeData<N>> nodeMap = new HashMap<N,NodeData<N>>();
+        for(N n : graph.getNodes()){
+            nodeMap.put(n, new NodeData<N>(n));
+        }
         //DFS
         Stack<N> nodeStack = new Stack<N>();
+
         nodeStack.push(startNode);
 
-        iterateDepthFirst(graph, nodeStack, nextNode);
+        iterateDepthFirst(graph, nodeMap, nodeStack, nextNode);
     }
 
     /**
@@ -167,23 +178,24 @@ public class GraphSearch {
      * used for DFS nodes ot be searched.
      *
      * @param graph     graph to search
+     * @param nodeMap   node and NodeData map
      * @param nodeStack stack of nodes to be searched
      * @param nextNode  interface for callbacks per node visit.
      * @param <E>       edge type
      */
-    private static <N extends INode, E extends IEdge<N>> void iterateDepthFirst(Graph<N,E> graph,
+    private static <N, E extends IEdge<N>> void iterateDepthFirst(Graph<N,E> graph,HashMap<N, NodeData<N>> nodeMap,
                                                             Stack<N> nodeStack, INextNode nextNode) {
         while (nodeStack.size() > 0) {
             N n = nodeStack.pop();
 
-            if (!n.isVisited()) {
+            if (!nodeMap.get(n).isVisited()) {
                 //Call delegate function here.
-                nextNode.onNextNode(graph, n.getPrevious(), n);
+                nextNode.onNextNode(graph, nodeMap.get(n).getPrevious().orElse(null), n);
 
-                n.setVisited(true);
-                List<N> adjNodes = Utilities.getAdjacentUnvisited(graph.getEdges(), n);
+                nodeMap.get(n).setVisited(true);
+                List<N> adjNodes = Utilities.getAdjacentUnvisited(nodeMap, graph.getEdges(), n);
                 for (N m : adjNodes) {
-                    m.setPrevious(n);
+                    nodeMap.get(m).setPrevious(Optional.of(n));
                     nodeStack.push(m);
                 }
 
@@ -208,16 +220,17 @@ public class GraphSearch {
      * @param nextEdge implementation of <code>INextEdge</code> interface.
      * @param <E>      THe edge type.
      */
-    public static <N extends INode, E extends IEdge<N>> void searchEdgesDepthFirst(Graph<N,E> graph, INextEdge nextEdge) {
+    public static <N, E extends IEdge<N>> void searchEdgesDepthFirst(Graph<N,E> graph, INextEdge nextEdge) {
         E current = null;
         boolean currentSelected = false;
+        HashMap<E,EdgeData<E>> edgeMap = new HashMap<>();
         //find an initial node, and set all nodes to not visited.
         for (E edge : graph.getEdges()) {
             if (!currentSelected) {
                 currentSelected = true;
                 current = edge;
             }
-            edge.setVisited(false);
+            edgeMap.put(edge, new EdgeData<E>(edge));
         }
 
         //DFS
@@ -226,11 +239,11 @@ public class GraphSearch {
         while (nodeStack.size() > 0) {
             E e = nodeStack.pop();
 
-            if (!e.isVisited()) {
+            if (!edgeMap.get(e).isVisited()) {
                 //Call delegate function here.
                 nextEdge.onNextEdge(graph, null, e);
 
-                e.setVisited(true);
+                edgeMap.get(e).setVisited(true);
                 ArrayList<E> incEdges = Utilities.getIncidentEdges(graph.getEdges(), e);
                 for (E next : incEdges) {
                     nodeStack.push(next);
@@ -252,7 +265,7 @@ public class GraphSearch {
      *
      * @param <E> Edge type.
      */
-    public interface INextNode<N extends INode, E extends IEdge<N>> {
+    public interface INextNode<N, E extends IEdge<N>> {
 
         /**
          * Called when each node is visited during a <i>BFS</i> or <i>DFS</i>.
@@ -278,7 +291,7 @@ public class GraphSearch {
      *
      * @param <E> Edge type.
      */
-    public interface INextEdge<N extends INode, E extends IEdge<N>> {
+    public interface INextEdge<N, E extends IEdge<N>> {
 
         /**
          * Called when each edge is visited during a <i>BFS</i> or <i>DFS</i>.

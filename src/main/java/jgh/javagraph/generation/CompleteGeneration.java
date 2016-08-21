@@ -18,7 +18,7 @@ public class CompleteGeneration {
      * @param nodeSet
      * @return
      */
-    public static <N extends INode> Graph<N, Edge<N>> create(HashSet<N> nodeSet) {
+    public static <N> Graph<N, Edge<N>> create(HashSet<N> nodeSet) {
         ArrayList<N> nodeList = new ArrayList<N>(nodeSet);
         ArrayList<Edge<N>> edgeList = new ArrayList<Edge<N>>();
         for (int i = 0; i < nodeList.size() - 1; i++) {
@@ -40,7 +40,7 @@ public class CompleteGeneration {
      * @param maxWeight the maximum possible weight.
      * @return Randomly positively weighted complete graph.
      */
-    public static <N extends INode> Graph<N, WeightedEdge<N>> createRandomWeighted(HashSet<N> nodeSet, float maxWeight) {
+    public static <N> Graph<N, WeightedEdge<N>> createRandomWeighted(HashSet<N> nodeSet, float maxWeight) {
         if (maxWeight < 0) throw new IllegalArgumentException("maxWeight must be non-negative.");
         Random random = new Random(System.currentTimeMillis());
         ArrayList<N> nodeList = new ArrayList<>(nodeSet);

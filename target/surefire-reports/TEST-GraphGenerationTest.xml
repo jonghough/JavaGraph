@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="GraphGenerationTest" time="0.011" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="GraphGenerationTest" time="0.045" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/i386"/>
-    <property name="java.vm.version" value="25.77-b03"/>
+    <property name="java.vm.version" value="25.91-b14"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
@@ -15,7 +15,7 @@
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/jon/IdeaProjects/javagraph2"/>
-    <property name="java.runtime.version" value="1.8.0_77-b03"/>
+    <property name="java.runtime.version" value="1.8.0_91-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
     <property name="os.arch" value="i386"/>
@@ -30,7 +30,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot Tiered Compilers"/>
-    <property name="os.version" value="3.13.0-85-generic"/>
+    <property name="os.version" value="3.13.0-86-generic"/>
     <property name="user.home" value="/home/jon"/>
     <property name="user.timezone" value="Asia/Tokyo"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -46,7 +46,7 @@
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_77"/>
+    <property name="java.version" value="1.8.0_91"/>
     <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
     <property name="securerandom.source" value="file:/dev/./urandom"/>
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
@@ -59,12 +59,12 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="GraphGenerationTest" name="testCompleteGraph1" time="0.003"/>
-  <testcase classname="GraphGenerationTest" name="testCompleteGraph2" time="0"/>
-  <testcase classname="GraphGenerationTest" name="testGridGraph1" time="0.002"/>
-  <testcase classname="GraphGenerationTest" name="testGridGraph2" time="0.001"/>
-  <testcase classname="GraphGenerationTest" name="testGearGraph1" time="0"/>
-  <testcase classname="GraphGenerationTest" name="testGearGraph2" time="0.002"/>
-  <testcase classname="GraphGenerationTest" name="testHelmGraph1" time="0.001"/>
-  <testcase classname="GraphGenerationTest" name="testHelmGraph2" time="0.001"/>
+  <testcase classname="GraphGenerationTest" name="testCompleteGraph1" time="0.041"/>
+  <testcase classname="GraphGenerationTest" name="testCompleteGraph2" time="0.001"/>
+  <testcase classname="GraphGenerationTest" name="testGridGraph1" time="0.001"/>
+  <testcase classname="GraphGenerationTest" name="testGridGraph2" time="0"/>
+  <testcase classname="GraphGenerationTest" name="testGearGraph1" time="0.001"/>
+  <testcase classname="GraphGenerationTest" name="testGearGraph2" time="0.001"/>
+  <testcase classname="GraphGenerationTest" name="testHelmGraph1" time="0"/>
+  <testcase classname="GraphGenerationTest" name="testHelmGraph2" time="0"/>
 </testsuite>

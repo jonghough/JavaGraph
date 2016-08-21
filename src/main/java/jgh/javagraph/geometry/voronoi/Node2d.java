@@ -1,7 +1,5 @@
 package jgh.javagraph.geometry.voronoi;
 
-import jgh.javagraph.INode;
-
 /**
  * Implementation of <code>INode</code> interface
  * containing <i>(x,y)</i> coordinates. We override
@@ -13,7 +11,7 @@ import jgh.javagraph.INode;
  *    the nodes with the same coordinates need to be seen as the same node, otherwise
  *    almost all <code>Graph</code> algorithms break down.
  */
-public class Node2d implements INode {
+public class Node2d implements Comparable<Node2d>  {
 
     private String mLabel = null;
     private boolean mVisited = false;
@@ -69,48 +67,17 @@ public class Node2d implements INode {
         mY = y;
     }
 
-    @Override
-    public String getLabel() {
-        return "("+getX()+", "+getY()+")";
+
+    public String getLabel(){
+        return mLabel;
     }
 
-    @Override
-    public void setLabel(String label) {
+    public void setLabel(String label){
         mLabel = label;
     }
 
     @Override
-    public float getDistance() {
-        return 0;
-    }
-
-    @Override
-    public void setDistance(float t) {
-
-    }
-
-    @Override
-    public boolean isVisited() {
-        return mVisited;
-    }
-
-    @Override
-    public void setVisited(boolean v) {
-        mVisited = v;
-    }
-
-    @Override
-    public INode getPrevious() {
-        return null;
-    }
-
-    @Override
-    public void setPrevious(INode node) {
-
-    }
-
-    @Override
-    public int compareTo(INode o) {
+    public int compareTo(Node2d o) {
         return 0;
     }
 }

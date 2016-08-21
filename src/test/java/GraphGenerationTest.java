@@ -15,10 +15,10 @@ public class GraphGenerationTest {
     @Test
     public void testCompleteGraph1(){
         HashSet<NodeGeneration.BasicNode> nodes = NodeGeneration.generateNodes(10);
-        Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>> K10 = CompleteGeneration.create(new HashSet<NodeGeneration.BasicNode>(nodes));
+        Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>> K10 =
+                CompleteGeneration.create(new HashSet<NodeGeneration.BasicNode>(nodes));
         Assert.assertEquals(10 * 9 / 2, K10.getEdges().size());
 
-        Assert.assertEquals(9, K10.degree(K10.getMinDegreeNode().get(0)));
         Assert.assertEquals(9, K10.degree(K10.getMinDegreeNode().get(0)));
     }
 

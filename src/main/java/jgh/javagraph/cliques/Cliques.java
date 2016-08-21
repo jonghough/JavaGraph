@@ -3,7 +3,6 @@ package jgh.javagraph.cliques;
 
 import jgh.javagraph.Graph;
 import jgh.javagraph.IEdge;
-import jgh.javagraph.INode;
 import jgh.javagraph.algorithms.Utilities;
 
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class Cliques {
      * @param <E>   Edge type
      * @return List of sets of nodes, where each set represents a clique.
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<HashSet<N>> findMaximalCliques(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> ArrayList<HashSet<N>> findMaximalCliques(Graph<N,E> graph) {
         HashSet<N> R = new HashSet<>();
         HashSet<N> X = new HashSet<>();
         HashSet<N> P = new HashSet<>(graph.getNodes());
@@ -43,7 +42,7 @@ public class Cliques {
      * @param <E>   Edge type
      * @return clique number.
      */
-    public static <N extends INode, E extends IEdge<N>> int getCliqueNumber(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> int getCliqueNumber(Graph<N,E> graph) {
         ArrayList<HashSet<N>> cliques = findMaximalCliques(graph);
         return cliques.stream().max(new Comparator<HashSet<N>>() {
             @Override
@@ -56,7 +55,7 @@ public class Cliques {
     }
 
 
-    private static <N extends INode, E extends IEdge<N>> ArrayList<HashSet<N>> findCliques(Graph<N,E> graph,
+    private static <N, E extends IEdge<N>> ArrayList<HashSet<N>> findCliques(Graph<N,E> graph,
                                                                            HashSet<N> R, HashSet<N> X, HashSet<N> P) {
         ArrayList<HashSet<N>> nodeSetList = new ArrayList<>();
         if (P.isEmpty() && X.isEmpty()) {

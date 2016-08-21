@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * Implementation of weighted edge. Edge has a weight of float type.
  */
-public class WeightedEdge<N extends INode> extends IEdge<N> implements Comparable<WeightedEdge<N>> {
+public class WeightedEdge<N> extends IEdge<N> implements Comparable<WeightedEdge<N>> {
 
     /**
      * the weight of the edge.
@@ -74,15 +74,6 @@ public class WeightedEdge<N extends INode> extends IEdge<N> implements Comparabl
         visitor.visit(this);
     }
 
-    @Override
-    public boolean isVisited() {
-        return mEdge.isVisited();
-    }
-
-    @Override
-    public void setVisited(boolean visited) {
-        mEdge.setVisited(visited);
-    }
 
     public float getWeight() {
         return mWeight;

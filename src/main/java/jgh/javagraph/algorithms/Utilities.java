@@ -21,7 +21,7 @@ public class Utilities {
      * @param <E>
      * @return
      */
-    public static <N extends INode, E extends IEdge<N>> boolean isComplete(Graph<N, E> graph) {
+    public static <N, E extends IEdge<N>> boolean isComplete(Graph<N, E> graph) {
         int e = graph.getEdges().size();
         int n = graph.getNodes().size();
         if (e == n * (n - 1) / 2)
@@ -38,7 +38,7 @@ public class Utilities {
      * @param graph2 second graph to merge
      * @return merged graph, the sum of the two graphs.
      */
-    public static <N extends INode, E extends IEdge<N>> Graph<N,E> mergeGraphs(Graph<N,E> graph1, Graph<N,E> graph2) {
+    public static <N, E extends IEdge<N>> Graph<N,E> mergeGraphs(Graph<N,E> graph1, Graph<N,E> graph2) {
         if (graph1 == null || graph2 == null) throw new IllegalArgumentException("Cannot pass a null Graph.");
         Collection<E> edges1 = graph1.getEdges();
         Collection<E> edges2 = graph2.getEdges();
@@ -73,8 +73,8 @@ public class Utilities {
      * @param node     given node.
      * @return ArrayList of edges which are incident with the given node.
      */
-    public static <E extends IEdge> ArrayList<E> getIncidentEdges(
-            Collection<E> edgeList, INode node) {
+    public static <N, E extends IEdge> ArrayList<E> getIncidentEdges(
+            Collection<E> edgeList, N node) {
         ArrayList<E> filtered = new ArrayList<E>();
 
         for (E e : edgeList) {
@@ -95,7 +95,7 @@ public class Utilities {
      * @param <E>   edge type
      * @return True if the nodes are connected, false otherwise.
      */
-    public static <N extends INode, E extends IEdge<N>> boolean isAdjacent(INode t1, INode t2, Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> boolean isAdjacent(N t1, N t2, Graph<N,E> graph) {
         Stream<E> streamt1 = graph.getEdges().stream();
         Stream<E> streamt2 = streamt1.filter(e -> e.nodes().contains(t1)
                 && e.nodes().contains(t2));
@@ -116,7 +116,7 @@ public class Utilities {
      * @param <E>      the edge type.
      * @return True if the edges are adjacent, false otherwise.
      */
-    public static <E extends IEdge> boolean isAdjacent(ArrayList<E> edgeList, INode node1, INode node2) {
+    public static <N, E extends IEdge> boolean isAdjacent(ArrayList<E> edgeList, N node1, N node2) {
         for (E e : edgeList) {
             if (e.from() == node1 && e.to() == node2) {
                 return true;
@@ -136,7 +136,7 @@ public class Utilities {
      * @param node
      * @return
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<N> getAdjacent(Collection<E> edgeList, INode node) {
+    public static <N, E extends IEdge<N>> ArrayList<N> getAdjacent(Collection<E> edgeList, N node) {
         HashSet<N> adjacent = new HashSet<N>();
         for (E e : edgeList) {
             if ((e.nodes().contains(node))) {
@@ -156,7 +156,7 @@ public class Utilities {
      * @param <E>      Edge type
      * @return List of adjacent, unvisited nodes.
      */
-    public static <N extends INode, E extends IEdge<N>> ArrayList<N> getAdjacentUnvisited(Collection<E> edgeList, N node) {
+    public static <N, E extends IEdge<N>> ArrayList<N> getAdjacentUnvisited(HashMap<N,NodeData<N>> nodeMap, Collection<E> edgeList, N node) {
         HashSet<N> adjacent = new HashSet<N>();
         for (E e : edgeList) {
             if ((e.nodes().contains(node))) {
@@ -164,7 +164,7 @@ public class Utilities {
                 if (node == e.from())
                     other = e.to();
                 else other = e.from();
-                if (other.isVisited() == false) {
+                if (nodeMap.get(other).isVisited() == false) {
                     adjacent.add(other);
                 }
             }
@@ -181,7 +181,7 @@ public class Utilities {
      * @param maxWeight the maximum weight
      * @return Weighted Graph
      */
-    public static <N extends INode> Graph<N, WeightedEdge<N>> generateRandomWeights(Graph<N,Edge<N>> graph, float minWeight,
+    public static <N> Graph<N, WeightedEdge<N>> generateRandomWeights(Graph<N,Edge<N>> graph, float minWeight,
                                                             float maxWeight) {
 
         Random random = new Random(System.currentTimeMillis());
@@ -210,7 +210,7 @@ public class Utilities {
      * @param maxWeight maximum possible weight value
      * @return Weighted, directed graph.
      */
-    public static <N extends INode> Graph<N, DirectedWeightedEdge<N>> generateRandomWeightsAndDirection(Graph<N, Edge<N>> graph, float minWeight,
+    public static <N> Graph<N, DirectedWeightedEdge<N>> generateRandomWeightsAndDirection(Graph<N, Edge<N>> graph, float minWeight,
                                                                                 float maxWeight) {
         if (minWeight > maxWeight)
             throw new IllegalArgumentException("Minimum weight value must be less than or equal to" +
@@ -237,15 +237,15 @@ public class Utilities {
      * @param edge
      * @return
      */
-    public static <E extends IEdge> boolean isDisjoint(ArrayList<E> edgeList, E edge) {
-        HashSet<INode> nodeHash = new HashSet<INode>();
+    public static <N,E extends IEdge> boolean isDisjoint(ArrayList<E> edgeList, E edge) {
+        HashSet<N> nodeHash = new HashSet<N>();
         for (E e : edgeList) {
             nodeHash.addAll(e.nodes());
         }
-        Iterator<INode> it = edge.nodes().iterator();
+        Iterator<N> it = edge.nodes().iterator();
         int contains = 0;
         while (it.hasNext()) {
-            INode t = it.next();
+            N t = it.next();
             if (nodeHash.contains(t))
                 contains++;
         }
@@ -264,7 +264,7 @@ public class Utilities {
      * @param <E>   Edge type
      * @return True if all edges are distinct, false otherwise.
      */
-    public static <N extends INode, E extends IEdge<N>> boolean areGraphEdgesDistinct(Graph<N,E> graph) {
+    public static <N, E extends IEdge<N>> boolean areGraphEdgesDistinct(Graph<N,E> graph) {
         // must check pairwise no two edges share exactly the same nodes.
         // O(n^2) check.
         ArrayList<E> edgeList = new ArrayList<E>(graph.getEdges());
@@ -288,7 +288,7 @@ public class Utilities {
      * @param <E>   Edge type.
      * @return True if the remaining edge set creates a connected set, false otherwise.
      */
-    public static <N extends INode, E extends IEdge<N>> boolean isConnectedWithoutEdge(Graph<N,E> graph, E edge) {
+    public static <N, E extends IEdge<N>> boolean isConnectedWithoutEdge(Graph<N,E> graph, E edge) {
         if (!graph.getEdges().contains(edge))
             throw new IllegalArgumentException("The edge must be contained in the graph.");
         ArrayList<E> edgeList = new ArrayList<>(graph.getEdges());

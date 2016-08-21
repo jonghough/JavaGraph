@@ -4,7 +4,7 @@ package jgh.javagraph;
  * Implementation of a <i> Directed edge</i>, an edge connecting two nodes, with a given direction,
  * either <i>forwards, backwards</i> or <i>both</i>, depending in which direction the edge may be traversed.
  */
-public class DirectedEdge<N extends INode> extends Edge<N> {
+public class DirectedEdge<N> extends Edge<N> {
 
     /**
      *

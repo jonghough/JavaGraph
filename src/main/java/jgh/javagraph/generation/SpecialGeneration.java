@@ -7,7 +7,6 @@ import jgh.javagraph.algorithms.GraphSearch;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * Generate special graphs.
@@ -53,7 +52,7 @@ public class SpecialGeneration {
         HashSet<NodeGeneration.BasicNode> nodes = new HashSet<>(NodeGeneration.generateNodes(points));
         NodeGeneration.BasicNode center = NodeGeneration.generateNodes(1).iterator().next();
         ArrayList<Edge<NodeGeneration.BasicNode>> edgeList = new ArrayList<Edge<NodeGeneration.BasicNode>>();
-        for (INode n : nodes) {
+        for (NodeGeneration.BasicNode n : nodes) {
             edgeList.add(new Edge(center, n));
         }
         return new Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>>(edgeList);
@@ -75,9 +74,11 @@ public class SpecialGeneration {
 
         Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>> cycle = CycleGeneration.generate(nodes);
         final ArrayList<Edge<NodeGeneration.BasicNode>> allEdges = new ArrayList<>(cycle.getEdges());
-        GraphSearch.searchBreadthFirst(cycle, new GraphSearch.INextNode() {
+
+        GraphSearch.INextNode<NodeGeneration.BasicNode, Edge<NodeGeneration.BasicNode>> nextNode =
+                new GraphSearch.INextNode<NodeGeneration.BasicNode, Edge<NodeGeneration.BasicNode>>() {
             @Override
-            public void onNextNode(IGraph graph, INode previous, INode current) {
+            public void onNextNode(IGraph graph, NodeGeneration.BasicNode previous, NodeGeneration.BasicNode current) {
                 allEdges.add( new Edge(bn, current));
             }
 
@@ -85,7 +86,9 @@ public class SpecialGeneration {
             public boolean forceStop() {
                 return false;
             }
-        });
+        };
+
+        GraphSearch.searchBreadthFirst(cycle, nextNode);
 
         return new Graph<NodeGeneration.BasicNode,Edge<NodeGeneration.BasicNode>>(allEdges);
     }
@@ -202,7 +205,7 @@ public class SpecialGeneration {
      * @return Grid graph.
      * @throws AlgorithmException
      */
-    public static <N extends INode, E extends Edge<N>> Graph<N,E> generateGrid(HashSet<N> nodeSet, int width) throws AlgorithmException {
+    public static <N, E extends Edge<N>> Graph<N,E> generateGrid(HashSet<N> nodeSet, int width) throws AlgorithmException {
 
         if (nodeSet.size() % width != 0)
             throw new AlgorithmException("Number of nodes must be a multiple of width.");
@@ -244,7 +247,7 @@ public class SpecialGeneration {
      * @return Graph on the given nodes, forming a 3D grid.
      * @throws AlgorithmException
      */
-    public static <N extends INode, E extends Edge<N>> Graph<N,E> generateGrid3D(HashSet<N> nodeSet, int width, int depth)
+    public static <N, E extends Edge<N>> Graph<N,E> generateGrid3D(HashSet<N> nodeSet, int width, int depth)
             throws AlgorithmException {
 
         if (nodeSet.size() % (width * depth) != 0)
@@ -253,10 +256,10 @@ public class SpecialGeneration {
 
         ArrayList<ArrayList<E>> edgeLists = new ArrayList<ArrayList<E>>();
         ArrayList<N> allNodeList = new ArrayList<N>(nodeSet);
-        N[][] nodePartition = (N[][])new INode[depth][width * height];
+        N[][] nodePartition = (N[][])new Object[depth][width * height];
         for (int i = 0; i < depth; i++) {
             HashSet<N> grid2dNodes = new HashSet<N>();
-            N[] nArr = (N[])new INode[width * height];
+            N[] nArr = (N[])new Object[width * height];
             for (int j = 0; j < width * height; j++) {
                 grid2dNodes.add(allNodeList.get(width * height * i + j));
 

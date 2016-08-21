@@ -11,7 +11,7 @@ import java.util.Set;
  * edges which hold a <i>capacity</i> and a <i>flow</i> value, and a flow <i>direction</i>.
  * Instances of this edge type are used for <i>Flow Network</i> algorithms.
  */
-public class CapacityEdge<N extends INode> extends IEdge<N> implements Comparable<CapacityEdge> {
+public class CapacityEdge<N> extends IEdge<N> implements Comparable<CapacityEdge> {
 
     /**
      * The underlying edge
@@ -81,15 +81,6 @@ public class CapacityEdge<N extends INode> extends IEdge<N> implements Comparabl
         //nothing
     }
 
-    @Override
-    public boolean isVisited() {
-        return mEdge.isVisited();
-    }
-
-    @Override
-    public void setVisited(boolean visited) {
-        mEdge.setVisited(visited);
-    }
 
     public float getCapacity() {
         return mCapacity;

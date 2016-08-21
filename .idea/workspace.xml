@@ -2,11 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecea9c52-38da-45ac-8c56-f1dc7d389f5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/BiconnectedComponentsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/EdgeData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/NodeData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/VertexCover.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/VertexCoverTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/INode.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/AStar.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/AStar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AStarTest.java" afterPath="$PROJECT_DIR$/src/test/java/AStarTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/AStarTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/AStarTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BellmanFord.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BellmanFord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BellmanFordTest.java" afterPath="$PROJECT_DIR$/src/test/java/BellmanFordTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/BellmanFordTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/BellmanFordTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BiconnectedComponentsTest.java" afterPath="$PROJECT_DIR$/src/test/java/BiconnectedComponentsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/BiconnectedComponentsTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/BiconnectedComponentsTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/flownetwork/CapacityEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/flownetwork/CapacityEdge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/Chromosome.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/Chromosome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CliqueTest.java" afterPath="$PROJECT_DIR$/src/test/java/CliqueTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/CliqueTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/CliqueTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/cliques/Cliques.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/cliques/Cliques.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CompleteGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CompleteGeneration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Connectivity.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Connectivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CycleGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CycleGeneration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Cycles.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Cycles.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CyclesTest.java" afterPath="$PROJECT_DIR$/src/test/java/CyclesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/CyclesTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/CyclesTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/DelaunayEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/DelaunayEdge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Dijkstra.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Dijkstra.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DijkstraTest.java" afterPath="$PROJECT_DIR$/src/test/java/DijkstraTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/DijkstraTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/DijkstraTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedEdge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedWeightedEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedWeightedEdge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/DisjointSet.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/DisjointSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/Edge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/Edge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/Graph.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/GraphGenerationTest.java" afterPath="$PROJECT_DIR$/src/test/java/GraphGenerationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/GraphGenerationTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/GraphGenerationTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/IEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/IEdge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/IGraph.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/IGraph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/linegraph/LineGraph.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/linegraph/LineGraph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LineGraphTest.java" afterPath="$PROJECT_DIR$/src/test/java/LineGraphTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/LineGraphTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/LineGraphTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/MinCut.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/MinCut.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MinCutTest.java" afterPath="$PROJECT_DIR$/src/test/java/MinCutTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/MinCutTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/MinCutTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/ModifiableEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/ModifiableEdge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Node2d.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Node2d.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/NodeGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/NodeGeneration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/RandomGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/RandomGeneration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/RandomWalk.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/RandomWalk.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/SpanningTree.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/SpanningTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SpanningTreeTest.java" afterPath="$PROJECT_DIR$/src/test/java/SpanningTreeTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/SpanningTreeTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/SpanningTreeTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SpeedTest.java" afterPath="$PROJECT_DIR$/src/test/java/SpeedTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/SpeedTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/SpeedTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-AStarTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-AStarTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BellmanFordTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BellmanFordTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BiconnectedComponentsTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BiconnectedComponentsTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-CliqueTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-CliqueTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-DijkstraTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-DijkstraTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphGenerationTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphGenerationTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-LineGraphTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-LineGraphTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-MinCutTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-MinCutTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SpanningTreeTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-SpanningTreeTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SpeedTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-SpeedTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-VoronoiTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-VoronoiTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TSP.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TSP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/Tree.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/Tree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Utilities.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Utilities.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/VoronoiTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/VoronoiTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jgh/javagraph/WeightedEdge.java" afterPath="$PROJECT_DIR$/src/main/java/jgh/javagraph/WeightedEdge.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javagraph2.iws" />
@@ -29,79 +99,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/Graph.java">
+      <file leaf-file-name="GraphGenerationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/GraphGenerationTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="55" />
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirectedWeightedEdge.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedWeightedEdge.java">
+      <file leaf-file-name="CompleteGeneration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CompleteGeneration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NodeGeneration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/NodeGeneration.java">
+      <file leaf-file-name="BellmanFord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BellmanFord.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dijkstra.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Dijkstra.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BiconnectedComponentGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1224#1225#0" expanded="true" />
-                <element signature="e#1261#1262#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PathGenerator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16380656">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpecialGeneration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="60" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -111,27 +133,73 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CycleGeneration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomGeneration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/RandomGeneration.java">
+      <file leaf-file-name="AStarTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/AStarTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <caret line="51" column="11" selection-start-line="48" selection-start-column="10" selection-end-line="51" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EdgeConversionVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/EdgeConversionVisitor.java">
+      <file leaf-file-name="Dijkstra.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Dijkstra.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VertexCover.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/VertexCover.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VertexCoverTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/VertexCoverTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.60807604">
+              <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BellmanFordTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/BellmanFordTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VoronoiTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/VoronoiTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -157,30 +225,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/display/VoronoiViewer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/evolution/Chromosome.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/evolution/ChromosomeComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/evolution/GeneticSolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java" />
-        <option value="$PROJECT_DIR$/src/test/java/MinCutTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Connectivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Utilities.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Bipartite.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CliqueTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/Chromosome.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/DisjointForest.java" />
         <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/DisjointSet.java" />
         <option value="$PROJECT_DIR$/src/test/java/FordFulkersonTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/SpanningTreeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/EdgeData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/DelaunayEdge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/NodeGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/INode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/IEdge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/WeightedEdge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/Edge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/NodeData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/IGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedWeightedEdge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/Chromosome.java" />
         <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/DisjointSet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/SpanningTree.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BiconnectedComponentsTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Cycles.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/MinCut.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/ModifiableEdge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedEdge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/linegraph/LineGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Node2d.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/RandomGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CompleteGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/flownetwork/CapacityEdge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/cliques/Cliques.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/RandomWalk.java" />
         <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Cycles.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Connectivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/AStar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Utilities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/SpanningTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TSP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/Tree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BellmanFord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java" />
+        <option value="$PROJECT_DIR$/src/test/java/GraphGenerationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/Graph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/VertexCover.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CliqueTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CyclesTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BiconnectedComponentsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DijkstraTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CycleGeneration.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BellmanFordTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AStarTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Dijkstra.java" />
+        <option value="$PROJECT_DIR$/src/test/java/VertexCoverTest.java" />
       </list>
     </option>
   </component>
@@ -223,9 +318,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -438,7 +530,97 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="voronoi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="generation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flownetwork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javagraph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cliques" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -474,12 +656,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager" selected="Application.VoronoiViewer">
     <configuration default="false" name="VoronoiViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -677,10 +864,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32786885" sideWeight="0.49682876" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32637855" sideWeight="0.5063425" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -699,11 +887,10 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.49682876" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32637855" sideWeight="0.49312896" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -755,115 +942,107 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Breakpoint.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MinCutTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/linegraph/LineGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1553#1559#0" expanded="false" />
-            <element signature="e#1622#1634#0" expanded="false" />
-            <element signature="e#2649#2650#0" expanded="false" />
-            <element signature="e#2693#2694#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Connectivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/SpanningTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/DisjointSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="145" column="32" selection-start-line="144" selection-start-column="8" selection-end-line="145" selection-end-column="32" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/ModifiableEdge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="4" selection-start-line="110" selection-start-column="4" selection-end-line="116" selection-end-column="5" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/mincut/MinCut.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MinCutTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/VoronoiGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/linegraph/LineGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1553#1559#0" expanded="false" />
-            <element signature="e#1622#1634#0" expanded="false" />
-            <element signature="e#2649#2650#0" expanded="false" />
-            <element signature="e#2693#2694#0" expanded="false" />
-          </folding>
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/Chromosome.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/TreeItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="199" column="0" selection-start-line="159" selection-start-column="4" selection-end-line="199" selection-end-column="0" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/SiteEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="4" selection-start-line="110" selection-start-column="4" selection-end-line="116" selection-end-column="5" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TSP.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Node2d.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/IEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/HalfEdge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/EventTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/DelaunayEdge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -871,27 +1050,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MinCutTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Breakpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TSP.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/RandomGeneration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/AlgorithmException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/RandomWalk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Cycles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/NodeGeneration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/IGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedWeightedEdge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -899,79 +1165,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Connectivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/RandomWalk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/geometry/voronoi/Breakpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedEdge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VoronoiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/cliques/Cliques.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CliqueTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/NodeData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/Chromosome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="276" column="1" selection-start-line="276" selection-start-column="1" selection-end-line="276" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/tsp/TspSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BellmanFord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -983,84 +1193,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/GraphSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/CliqueTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="32" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/FordFulkerson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FordFulkersonTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/CyclesTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SpanningTreeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/DisjointSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/trees/SpanningTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/linegraph/LineGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1553#1559#0" expanded="false" />
-            <element signature="e#1622#1634#0" expanded="false" />
-            <element signature="e#2649#2650#0" expanded="false" />
-            <element signature="e#2693#2694#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CompleteGeneration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="284" column="6" selection-start-line="284" selection-start-column="6" selection-end-line="284" selection-end-column="6" />
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1068,38 +1212,28 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/BiconnectedComponentsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Cycles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <caret line="30" column="11" selection-start-line="25" selection-start-column="10" selection-end-line="30" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/SpecialGeneration.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/DijkstraTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="60" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+          <caret line="115" column="3" selection-start-line="115" selection-start-column="3" selection-end-line="118" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CycleGeneration.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/LineGraphTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/RandomGeneration.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/MinCutTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
@@ -1107,34 +1241,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/EdgeConversionVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SpanningTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/Graph.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SpeedTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="55" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/DirectedWeightedEdge.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/VoronoiTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/NodeGeneration.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/GraphGenerationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CompleteGeneration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/generation/CycleGeneration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BellmanFord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BellmanFordTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AStarTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="11" selection-start-line="48" selection-start-column="10" selection-end-line="51" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1142,31 +1316,29 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/Dijkstra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/BiconnectedComponentGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/PathGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jgh/javagraph/algorithms/VertexCover.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16380656">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/VertexCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60807604">
+          <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

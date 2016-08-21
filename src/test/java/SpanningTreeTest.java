@@ -1,6 +1,5 @@
 import jgh.javagraph.Edge;
 import jgh.javagraph.Graph;
-import jgh.javagraph.INode;
 import jgh.javagraph.WeightedEdge;
 import jgh.javagraph.trees.SpanningTree;
 import jgh.javagraph.generation.CompleteGeneration;

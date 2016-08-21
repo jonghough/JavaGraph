@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * @param <E>
  */
-public interface IGraph<N extends INode, E extends IEdge<N>> {
+public interface IGraph<N, E extends IEdge<N>> {
 
     /**
      * Returns a List of all edges on the graph.

@@ -1,10 +1,8 @@
 import jgh.javagraph.Edge;
 import jgh.javagraph.Graph;
-import jgh.javagraph.INode;
 import jgh.javagraph.algorithms.Connectivity;
 import jgh.javagraph.generation.CompleteGeneration;
 import jgh.javagraph.generation.NodeGeneration;
-import junit.framework.Assert;
 import org.junit.Test;
 
 import java.util.HashSet;

@@ -3,7 +3,6 @@ package jgh.javagraph.algorithms;
 
 import jgh.javagraph.Graph;
 import jgh.javagraph.IEdge;
-import jgh.javagraph.INode;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -16,7 +15,7 @@ import java.util.Stack;
  * removing any edge from the subset will still leave a connected graph.
  *
  */
-public class BiconnectedComponentGenerator<N extends INode, E extends IEdge<N>> {
+public class BiconnectedComponentGenerator<N, E extends IEdge<N>> {
 
     private Stack<E> mEdgeStack;
     private HashMap<N,NodeData<N>> mDataMap;
@@ -24,7 +23,7 @@ public class BiconnectedComponentGenerator<N extends INode, E extends IEdge<N>> 
     private HashSet<HashSet<E>> mConnectedSets;
     private int mCounter = 0;
 
-    private class NodeData<N extends INode>{
+    private class NodeData<N>{
         public boolean visited = false;
         public N parent = null;
         public int depth = 0;
@@ -47,7 +46,7 @@ public class BiconnectedComponentGenerator<N extends INode, E extends IEdge<N>> 
     public void findBiconnectedComponents(){
 
         for(N node : mGraph.getNodes()){
-            node.setVisited(false);
+            //node.setVisited(false);
             mDataMap.put(node, new NodeData<N>()); //initialize null parent
         }
 

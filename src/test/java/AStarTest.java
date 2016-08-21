@@ -1,6 +1,4 @@
-import jgh.javagraph.Edge;
 import jgh.javagraph.Graph;
-import jgh.javagraph.INode;
 import jgh.javagraph.WeightedEdge;
 import jgh.javagraph.algorithms.AStar;
 import jgh.javagraph.generation.NodeGeneration;
@@ -8,7 +6,6 @@ import junit.framework.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 
 
@@ -43,16 +40,16 @@ public class AStarTest {
         list.add(eDF);
 
         Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>> g = new Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>>(list);
-        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b6, new AStar.IAStarHeuristic() {
+        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b6, new AStar.IAStarHeuristic<NodeGeneration.BasicNode>() {
             @Override
-            public float getHeuristic(INode t, INode goal) {
+            public float getHeuristic(NodeGeneration.BasicNode t, NodeGeneration.BasicNode goal) {
                 return 15;
             }
         });
-        System.out.println("path len  "+path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  "+path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
 
         Assert.assertTrue("contains A B F and size is 3", path.contains(b1) &&
                 path.contains(b2) && path.contains(b6) && path.size() == 3);
@@ -95,19 +92,19 @@ public class AStarTest {
         list.add(eCE);
 
         Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>> g = new Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>>(list);
-        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b8, new AStar.IAStarHeuristic() {
+        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b8, new AStar.IAStarHeuristic<NodeGeneration.BasicNode>() {
             @Override
-            public float getHeuristic(INode t, INode goal) {
+            public float getHeuristic(NodeGeneration.BasicNode t, NodeGeneration.BasicNode goal) {
                 return 5;
             }
         });
 
         Assert.assertTrue("contains A D F H and size is 4", path.contains(b1) && path.contains(b4) &&
                 path.contains(b6) && path.contains(b8) && path.size() == 4);
-        System.out.println("path len  " + path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  " + path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
     }
 
 
@@ -124,18 +121,18 @@ public class AStarTest {
         list.add(eAB);
 
         Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>> g = new Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>>(list);
-        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b2, new AStar.IAStarHeuristic() {
+        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b2, new AStar.IAStarHeuristic<NodeGeneration.BasicNode>() {
             @Override
-            public float getHeuristic(INode t, INode goal) {
+            public float getHeuristic(NodeGeneration.BasicNode t, NodeGeneration.BasicNode goal) {
                 return 5;
             }
         });
 
         Assert.assertTrue("contains A B and size is 2", path.contains(b1) && path.contains(b2) && path.size() == 2);
-        System.out.println("path len  "+path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  "+path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
     }
 
     @Test
@@ -172,9 +169,9 @@ public class AStarTest {
         list.add(eHA);
 
         Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>> g = new Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>>(list);
-        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b8, new AStar.IAStarHeuristic() {
+        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b8, new AStar.IAStarHeuristic<NodeGeneration.BasicNode>() {
             @Override
-            public float getHeuristic(INode t, INode goal) {
+            public float getHeuristic(NodeGeneration.BasicNode t, NodeGeneration.BasicNode goal) {
                 return 5;
             }
         });
@@ -182,10 +179,10 @@ public class AStarTest {
         Assert.assertTrue("contains A B C D E F G H and size is 8", path.contains(b1) && path.contains(b2) &&
                 path.contains(b3) && path.contains(b4) && path.contains(b5) && path.contains(b6) && path.contains(b7)
                 && path.contains(b8) && path.size() == 8);
-        System.out.println("path len  "+path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  "+path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
     }
 
 
@@ -268,9 +265,9 @@ public class AStarTest {
 
 
         Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>> g = new Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>>(list);
-        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b10, new AStar.IAStarHeuristic() {
+        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b10, new AStar.IAStarHeuristic<NodeGeneration.BasicNode>() {
             @Override
-            public float getHeuristic(INode t, INode goal) {
+            public float getHeuristic(NodeGeneration.BasicNode t, NodeGeneration.BasicNode goal) {
                 return 5;
             }
         });
@@ -278,10 +275,10 @@ public class AStarTest {
         Assert.assertTrue("contains A B C D E F G H I J and size is 10", path.contains(b1) && path.contains(b2) &&
                 path.contains(b3) && path.contains(b4) && path.contains(b5) && path.contains(b6) && path.contains(b7)
                 && path.contains(b8) && path.contains(b9) && path.contains(b10) && path.size() == 10);
-        System.out.println("path len  "+path.size());
-        for(NodeGeneration.BasicNode n : path){
-            System.out.println("node in path   "+n.getLabel());
-        }
+//        System.out.println("path len  "+path.size());
+//        for(NodeGeneration.BasicNode n : path){
+//            System.out.println("node in path   "+n.getLabel());
+//        }
     }
 
     @Test
@@ -300,13 +297,13 @@ public class AStarTest {
         //list.add(eAB);
 
         Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>> g = new Graph<NodeGeneration.BasicNode, WeightedEdge<NodeGeneration.BasicNode>>(list, nodeSet);
-        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b2, new AStar.IAStarHeuristic() {
+        ArrayList<NodeGeneration.BasicNode> path = AStar.findMinPath(g, b1, b2, new AStar.IAStarHeuristic<NodeGeneration.BasicNode>() {
             @Override
-            public float getHeuristic(INode t, INode goal) {
+            public float getHeuristic(NodeGeneration.BasicNode t, NodeGeneration.BasicNode goal) {
                 return 5;
             }
         });
-        System.out.println("path len  "+path.size());
+
         Assert.assertTrue("path is empty (except for start node)", path.size() == 1);
 
     }
