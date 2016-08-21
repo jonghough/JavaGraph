@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecea9c52-38da-45ac-8c56-f1dc7d389f5d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/AStarTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/AStarTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/BellmanFordTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/BellmanFordTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/BiconnectedComponentsTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/BiconnectedComponentsTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/CliqueTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/CliqueTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/DijkstraTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/DijkstraTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/LineGraphTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/LineGraphTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/MinCutTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/MinCutTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/SpanningTreeTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/SpanningTreeTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/SpeedTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/SpeedTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-AStarTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-AStarTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BellmanFordTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BellmanFordTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BiconnectedComponentsTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BiconnectedComponentsTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-CliqueTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-CliqueTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-DijkstraTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-DijkstraTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphGenerationTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphGenerationTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-LineGraphTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-LineGraphTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-MinCutTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-MinCutTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SpanningTreeTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-SpanningTreeTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SpeedTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-SpeedTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-VoronoiTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-VoronoiTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/VertexCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/VertexCoverTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/VoronoiTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/VoronoiTest.txt" />
     </list>
     <ignored path="javagraph2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,8 +122,8 @@
       <file leaf-file-name="VertexCoverTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/VertexCoverTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6437055">
-              <caret line="19" column="55" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.5011876">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1260,8 +1281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VertexCoverTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6437055">
-          <caret line="19" column="55" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.5011876">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

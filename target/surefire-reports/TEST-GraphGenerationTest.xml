@@ -63,8 +63,8 @@
   <testcase classname="GraphGenerationTest" name="testCompleteGraph2" time="0.001"/>
   <testcase classname="GraphGenerationTest" name="testGridGraph1" time="0"/>
   <testcase classname="GraphGenerationTest" name="testGridGraph2" time="0"/>
-  <testcase classname="GraphGenerationTest" name="testGearGraph1" time="0"/>
-  <testcase classname="GraphGenerationTest" name="testGearGraph2" time="0.001"/>
-  <testcase classname="GraphGenerationTest" name="testHelmGraph1" time="0"/>
-  <testcase classname="GraphGenerationTest" name="testHelmGraph2" time="0.001"/>
+  <testcase classname="GraphGenerationTest" name="testGearGraph1" time="0.001"/>
+  <testcase classname="GraphGenerationTest" name="testGearGraph2" time="0"/>
+  <testcase classname="GraphGenerationTest" name="testHelmGraph1" time="0.001"/>
+  <testcase classname="GraphGenerationTest" name="testHelmGraph2" time="0"/>
 </testsuite>
