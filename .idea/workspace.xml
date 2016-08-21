@@ -102,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/VertexCoverTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6437055">
-              <caret line="19" column="57" selection-start-line="15" selection-start-column="10" selection-end-line="19" selection-end-column="57" />
+              <caret line="19" column="55" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1261,7 +1261,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/VertexCoverTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6437055">
-          <caret line="19" column="57" selection-start-line="15" selection-start-column="10" selection-end-line="19" selection-end-column="57" />
+          <caret line="19" column="55" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
